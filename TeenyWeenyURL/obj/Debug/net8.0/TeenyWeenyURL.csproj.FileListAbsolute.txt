@@ -133,3 +133,4 @@ C:\Users\jeffr\Documents\Programming\TeenyWeenyURL\TeenyWeenyURL\obj\Debug\net8.
 C:\Users\jeffr\Documents\Programming\TeenyWeenyURL\TeenyWeenyURL\obj\Debug\net8.0\TeenyWeenyURL.pdb
 C:\Users\jeffr\Documents\Programming\TeenyWeenyURL\TeenyWeenyURL\obj\Debug\net8.0\TeenyWeenyURL.genruntimeconfig.cache
 C:\Users\jeffr\Documents\Programming\TeenyWeenyURL\TeenyWeenyURL\obj\Debug\net8.0\ref\TeenyWeenyURL.dll
+C:\Users\jeffr\Documents\Programming\TeenyWeenyURL\TeenyWeenyURL\obj\Debug\net8.0\TeenyWeenyURL.sourcelink.json

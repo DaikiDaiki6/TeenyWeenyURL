@@ -32,11 +32,33 @@ public class ShortUrlService : IShortUrlService
         return shortCode;
     }
 
-    public async Task<string?> GetOriginalUrlAsync(string ShortCode)
+    public async Task<bool> DeleteShortUrlAsync(int id)
     {
-        var entity = await _context.ShortUrls.FirstOrDefaultAsync(i => i.ShortCode == ShortCode);
+        var shortUrl = await _context.ShortUrls.FindAsync(id);
 
+        if (shortUrl is null) return false;
+        
+        _context.ShortUrls.Remove(shortUrl);
+        await _context.SaveChangesAsync();
+
+        return true;
+    }
+
+    public async Task<string?> GetOriginalUrlAsync(string shortCode)
+    {
+        var entity = await _context.ShortUrls.FirstOrDefaultAsync(i => i.ShortCode == shortCode);
+        if (entity != null)
+        {
+        entity.Clicks++;
+        await _context.SaveChangesAsync();
+        }
         return entity?.OriginalUrl;
+    }
+
+    public async Task<List<ShortUrl>> GetShortUrlsPerUsersId(int id)
+    {
+        List<ShortUrl> shortUrls = await _context.ShortUrls.Where(i => i.UserId == id).ToListAsync();
+        return shortUrls;
     }
 
     private string GenerateShortCode()
