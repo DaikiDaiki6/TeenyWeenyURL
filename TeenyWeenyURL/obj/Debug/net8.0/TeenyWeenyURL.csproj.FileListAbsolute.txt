@@ -134,3 +134,12 @@ C:\Users\jeffr\Documents\Programming\TeenyWeenyURL\TeenyWeenyURL\obj\Debug\net8.
 C:\Users\jeffr\Documents\Programming\TeenyWeenyURL\TeenyWeenyURL\obj\Debug\net8.0\TeenyWeenyURL.genruntimeconfig.cache
 C:\Users\jeffr\Documents\Programming\TeenyWeenyURL\TeenyWeenyURL\obj\Debug\net8.0\ref\TeenyWeenyURL.dll
 C:\Users\jeffr\Documents\Programming\TeenyWeenyURL\TeenyWeenyURL\obj\Debug\net8.0\TeenyWeenyURL.sourcelink.json
+C:\Users\jeffr\Documents\Programming\TeenyWeenyURL\TeenyWeenyURL\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\jeffr\Documents\Programming\TeenyWeenyURL\TeenyWeenyURL\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\jeffr\Documents\Programming\TeenyWeenyURL\TeenyWeenyURL\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\jeffr\Documents\Programming\TeenyWeenyURL\TeenyWeenyURL\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\jeffr\Documents\Programming\TeenyWeenyURL\TeenyWeenyURL\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\jeffr\Documents\Programming\TeenyWeenyURL\TeenyWeenyURL\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\jeffr\Documents\Programming\TeenyWeenyURL\TeenyWeenyURL\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\jeffr\Documents\Programming\TeenyWeenyURL\TeenyWeenyURL\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\jeffr\Documents\Programming\TeenyWeenyURL\TeenyWeenyURL\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

@@ -1,4 +1,5 @@
 using System;
+using System.Security.Claims;
 using Microsoft.EntityFrameworkCore;
 using TeenyWeenyURL.Data;
 using TeenyWeenyURL.Model.DTO;
@@ -32,9 +33,9 @@ public class ShortUrlService : IShortUrlService
         return shortCode;
     }
 
-    public async Task<bool> DeleteShortUrlAsync(int id)
+    public async Task<bool> DeleteShortUrlAsync(int id, int userId)
     {
-        var shortUrl = await _context.ShortUrls.FindAsync(id);
+        var shortUrl = await _context.ShortUrls.FirstOrDefaultAsync(i => i.Id == id && i.UserId == userId);
 
         if (shortUrl is null) return false;
         
@@ -55,8 +56,10 @@ public class ShortUrlService : IShortUrlService
         return entity?.OriginalUrl;
     }
 
-    public async Task<List<ShortUrl>> GetShortUrlsPerUsersId(int id)
+    public async Task<List<ShortUrl>?> GetShortUrlsPerUsersId(int id)
     {
+        if (id <= 0) return null;
+
         List<ShortUrl> shortUrls = await _context.ShortUrls.Where(i => i.UserId == id).ToListAsync();
         return shortUrls;
     }
