@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using TeenyWeenyURL.Data;
 using TeenyWeenyURL.Model.DTO;
 using TeenyWeenyURL.Model.Entity;
+using BCrypt;
 
 namespace TeenyWeenyURL.Services;
 
@@ -32,13 +33,19 @@ public class UserService : IUserService
         var user = await _context.Users.FindAsync(id);
         if (user == null) return null;
 
-        if (!string.IsNullOrEmpty(request.Username))
+        // Check if username is being changed and if it's already taken
+        if (!string.IsNullOrEmpty(request.Username) && request.Username != user.Username)
         {
+            var existingUser = await _context.Users.FirstOrDefaultAsync(u => u.Username == request.Username);
+            if (existingUser != null) return null; // Username already taken
+            
             user.Username = request.Username;
         }
+
+        // Hash password if it's being changed
         if (!string.IsNullOrEmpty(request.Password))
         {
-            user.Password = request.Password;
+            user.Password = BCrypt.Net.BCrypt.HashPassword(request.Password);
         }
 
         await _context.SaveChangesAsync();

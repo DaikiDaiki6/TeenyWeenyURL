@@ -1,4 +1,5 @@
 using System;
+using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TeenyWeenyURL.Model.DTO;
@@ -17,18 +18,30 @@ public class UserController : ControllerBase
         _userservice = userService;
     }
 
-    [HttpPatch("{id:int}")]
-    public async Task<IActionResult> EditUser(EditUserRequest request, int id)
+    [HttpPatch("profile")]
+    public async Task<IActionResult> EditMyProfile(EditUserRequest request)
     {
-        var user = await _userservice.EditUserAsync(request, id);
+        var currentUserId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        if (string.IsNullOrEmpty(currentUserId) || !int.TryParse(currentUserId, out int userId))
+        {
+            return Unauthorized();
+        }
+
+        var user = await _userservice.EditUserAsync(request, userId);
         if (user is null) return NotFound(new { message = "User is not found." });
         return Ok(user);
     }
 
-    [HttpDelete("{id:int}")]
-    public async Task<IActionResult> DeleteUser(int id)
+    [HttpDelete("profile")]
+    public async Task<IActionResult> DeleteMyProfile()
     {
-        var user = await _userservice.DeleteUserAsync(id);
+        var currentUserId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        if (string.IsNullOrEmpty(currentUserId) || !int.TryParse(currentUserId, out int userId))
+        {
+            return Unauthorized();
+        }
+
+        var user = await _userservice.DeleteUserAsync(userId);
         if (!user) return NotFound(new { message = "User is not found." });
         return NoContent();
     }
