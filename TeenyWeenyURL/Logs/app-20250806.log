@@ -1,0 +1,76 @@
+2025-08-06 11:47:47.659 +08:00 [INF] User profile is available. Using 'C:\Users\jeffr\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-06 11:47:47.749 +08:00 [INF] Now listening on: http://localhost:5140
+2025-08-06 11:47:47.752 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-06 11:47:47.753 +08:00 [INF] Hosting environment: Development
+2025-08-06 11:47:47.754 +08:00 [INF] Content root path: C:\Users\jeffr\Documents\Programming\TeenyWeenyURL\TeenyWeenyURL
+2025-08-06 11:47:59.341 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/swagger/index.html - null null
+2025-08-06 11:47:59.437 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/swagger/index.html - 200 null text/html;charset=utf-8 96.5757ms
+2025-08-06 11:47:59.625 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/swagger/v1/swagger.json - null null
+2025-08-06 11:47:59.751 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 127.1401ms
+2025-08-06 11:48:30.562 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5140/api/Auth/login - application/json 53
+2025-08-06 11:48:30.587 +08:00 [INF] CORS policy execution successful.
+2025-08-06 11:48:30.589 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-08-06 11:48:30.593 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.AuthController.Login (TeenyWeenyURL)'
+2025-08-06 11:48:30.610 +08:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(TeenyWeenyURL.Model.DTO.LoginUserRequest) on controller TeenyWeenyURL.Controller.AuthController (TeenyWeenyURL).
+2025-08-06 11:48:30.721 +08:00 [INF] User login attempt: gorelseal
+2025-08-06 11:48:31.522 +08:00 [INF] Executed DbCommand (37ms) [Parameters=[@__request_Username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Password", u."Username"
+FROM "Users" AS u
+WHERE u."Username" = @__request_Username_0
+LIMIT 1
+2025-08-06 11:48:31.900 +08:00 [INF] User logged in successfully: gorelseal
+2025-08-06 11:48:31.906 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-06 11:48:31.920 +08:00 [INF] Executed action TeenyWeenyURL.Controller.AuthController.Login (TeenyWeenyURL) in 1303.7387ms
+2025-08-06 11:48:31.921 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.AuthController.Login (TeenyWeenyURL)'
+2025-08-06 11:48:31.925 +08:00 [INF] HTTP POST /api/Auth/login responded 200 in 1355.6000 ms
+2025-08-06 11:48:31.935 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5140/api/Auth/login - 200 null application/json; charset=utf-8 1372.1803ms
+2025-08-06 11:48:47.750 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/api/ShortUrls/all-urls - null null
+2025-08-06 11:48:47.784 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId (TeenyWeenyURL)'
+2025-08-06 11:48:47.788 +08:00 [INF] Route matched with {action = "GetShortUrlPerUserId", controller = "ShortUrls"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetShortUrlPerUserId() on controller TeenyWeenyURL.Controller.ShortUrlsController (TeenyWeenyURL).
+2025-08-06 11:48:47.792 +08:00 [INF] Retrieving short URLs for user 1
+2025-08-06 11:48:47.859 +08:00 [INF] Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."ShortCode", s."OriginalUrl", s."Clicks", s."CreatedAt"
+FROM "ShortUrls" AS s
+WHERE s."UserId" = @__id_0
+2025-08-06 11:48:47.862 +08:00 [INF] Retrieved 2 short URLs for user 1
+2025-08-06 11:48:47.863 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TeenyWeenyURL.Model.DTO.ShortUrlResponse, TeenyWeenyURL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-06 11:48:47.872 +08:00 [INF] Executed action TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId (TeenyWeenyURL) in 82.5813ms
+2025-08-06 11:48:47.874 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId (TeenyWeenyURL)'
+2025-08-06 11:48:47.876 +08:00 [INF] HTTP GET /api/ShortUrls/all-urls responded 200 in 122.6699 ms
+2025-08-06 11:48:47.878 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/api/ShortUrls/all-urls - 200 null application/json; charset=utf-8 127.5049ms
+2025-08-06 11:59:20.230 +08:00 [INF] User profile is available. Using 'C:\Users\jeffr\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-06 11:59:20.325 +08:00 [INF] Now listening on: http://localhost:5140
+2025-08-06 11:59:20.328 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-06 11:59:20.329 +08:00 [INF] Hosting environment: Development
+2025-08-06 11:59:20.330 +08:00 [INF] Content root path: C:\Users\jeffr\Documents\Programming\TeenyWeenyURL\TeenyWeenyURL
+2025-08-06 11:59:24.899 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/api/ShortUrls/all-urls - null null
+2025-08-06 11:59:25.008 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-08-06 11:59:25.010 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId (TeenyWeenyURL)'
+2025-08-06 11:59:25.025 +08:00 [INF] Route matched with {action = "GetShortUrlPerUserId", controller = "ShortUrls"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetShortUrlPerUserId() on controller TeenyWeenyURL.Controller.ShortUrlsController (TeenyWeenyURL).
+2025-08-06 11:59:25.108 +08:00 [INF] Retrieving short URLs for user 1
+2025-08-06 11:59:25.873 +08:00 [INF] Executed DbCommand (37ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."ShortCode", s."OriginalUrl", s."Clicks", s."CreatedAt"
+FROM "ShortUrls" AS s
+WHERE s."UserId" = @__id_0
+2025-08-06 11:59:25.896 +08:00 [INF] Retrieved 2 short URLs for user 1
+2025-08-06 11:59:25.902 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TeenyWeenyURL.Model.DTO.ShortUrlResponse, TeenyWeenyURL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-06 11:59:25.958 +08:00 [INF] Executed action TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId (TeenyWeenyURL) in 930.1325ms
+2025-08-06 11:59:25.961 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId (TeenyWeenyURL)'
+2025-08-06 11:59:25.964 +08:00 [INF] HTTP GET /api/ShortUrls/all-urls responded 200 in 1018.1882 ms
+2025-08-06 11:59:25.972 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/api/ShortUrls/all-urls - 200 null application/json; charset=utf-8 1074.6763ms
+2025-08-06 11:59:41.965 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5140/api/ShortUrls/create-twurl - application/json 81
+2025-08-06 11:59:41.981 +08:00 [INF] CORS policy execution successful.
+2025-08-06 11:59:41.983 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.ShortUrlsController.CreateShortUrl (TeenyWeenyURL)'
+2025-08-06 11:59:41.992 +08:00 [INF] Route matched with {action = "CreateShortUrl", controller = "ShortUrls"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateShortUrl(TeenyWeenyURL.Model.DTO.CreateShortUrlRequest) on controller TeenyWeenyURL.Controller.ShortUrlsController (TeenyWeenyURL).
+2025-08-06 11:59:42.022 +08:00 [INF] Creating short URL for user 1 with original URL: https://www.youtube.com/watch?v=9rz6jZkgduE
+2025-08-06 11:59:42.180 +08:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?', @p3='?', @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "ShortUrls" ("Clicks", "CreatedAt", "OriginalUrl", "ShortCode", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4)
+RETURNING "Id";
+2025-08-06 11:59:42.196 +08:00 [INF] Short URL created successfully for user 1 with code: 3ac7ba
+2025-08-06 11:59:42.198 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-06 11:59:42.205 +08:00 [INF] Executed action TeenyWeenyURL.Controller.ShortUrlsController.CreateShortUrl (TeenyWeenyURL) in 211.7693ms
+2025-08-06 11:59:42.206 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.ShortUrlsController.CreateShortUrl (TeenyWeenyURL)'
+2025-08-06 11:59:42.207 +08:00 [INF] HTTP POST /api/ShortUrls/create-twurl responded 200 in 233.6478 ms
+2025-08-06 11:59:42.209 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5140/api/ShortUrls/create-twurl - 200 null application/json; charset=utf-8 243.9308ms
+2025-08-06 12:02:40.666 +08:00 [INF] Application is shutting down...

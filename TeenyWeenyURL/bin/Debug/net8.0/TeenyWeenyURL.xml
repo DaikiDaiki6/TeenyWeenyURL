@@ -1,0 +1,286 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TeenyWeenyURL</name>
+    </assembly>
+    <members>
+        <member name="T:TeenyWeenyURL.Controller.AuthController">
+            <summary>
+            Controller for handling user authentication operations
+            </summary>
+        </member>
+        <member name="M:TeenyWeenyURL.Controller.AuthController.#ctor(TeenyWeenyURL.Services.AuthService,Microsoft.Extensions.Logging.ILogger{TeenyWeenyURL.Controller.AuthController})">
+            <summary>
+            Initializes a new instance of the AuthController
+            </summary>
+            <param name="authService">The authentication service</param>
+            <param name="logger">The logger</param>
+        </member>
+        <member name="M:TeenyWeenyURL.Controller.AuthController.Register(TeenyWeenyURL.Model.DTO.CreateUserRequest)">
+            <summary>
+            Registers a new user account
+            </summary>
+            <param name="request">The user registration request</param>
+            <returns>User information if registration successful</returns>
+            <response code="200">User successfully registered</response>
+            <response code="409">User already exists</response>
+            <response code="400">Invalid request data</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:TeenyWeenyURL.Controller.AuthController.Login(TeenyWeenyURL.Model.DTO.LoginUserRequest)">
+            <summary>
+            Authenticates a user and returns a JWT token
+            </summary>
+            <param name="request">The login request</param>
+            <returns>JWT token if authentication successful</returns>
+            <response code="200">Login successful</response>
+            <response code="401">Invalid credentials</response>
+            <response code="400">Invalid request data</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="T:TeenyWeenyURL.Controller.RedirectController">
+            <summary>
+            Controller for handling URL redirection operations
+            </summary>
+        </member>
+        <member name="M:TeenyWeenyURL.Controller.RedirectController.#ctor(TeenyWeenyURL.Services.IShortUrlService,Microsoft.Extensions.Logging.ILogger{TeenyWeenyURL.Controller.RedirectController})">
+            <summary>
+            Initializes a new instance of the RedirectController
+            </summary>
+            <param name="shortUrlService">The short URL service</param>
+            <param name="logger">The logger</param>
+        </member>
+        <member name="M:TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal(System.String)">
+            <summary>
+            Redirects a short code to its original URL
+            </summary>
+            <param name="shortcode">The short code to redirect</param>
+            <returns>Redirect to the original URL</returns>
+            <response code="302">Redirect to original URL</response>
+            <response code="404">Short URL not found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="T:TeenyWeenyURL.Controller.ShortUrlsController">
+            <summary>
+            Controller for handling shortened URL operations
+            </summary>
+        </member>
+        <member name="M:TeenyWeenyURL.Controller.ShortUrlsController.#ctor(TeenyWeenyURL.Services.IShortUrlService,Microsoft.Extensions.Logging.ILogger{TeenyWeenyURL.Controller.ShortUrlsController})">
+            <summary>
+            Initializes a new instance of the ShortUrlsController
+            </summary>
+            <param name="shortUrlService">The short URL service</param>
+            <param name="logger">The logger</param>
+        </member>
+        <member name="M:TeenyWeenyURL.Controller.ShortUrlsController.CreateShortUrl(TeenyWeenyURL.Model.DTO.CreateShortUrlRequest)">
+            <summary>
+            Creates a new shortened URL for the authenticated user
+            </summary>
+            <param name="request">The request containing the original URL</param>
+            <returns>The shortened URL</returns>
+            <response code="200">Shortened URL created successfully</response>
+            <response code="401">User not authenticated</response>
+            <response code="400">Invalid request data</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId">
+            <summary>
+            Retrieves all shortened URLs for the authenticated user
+            </summary>
+            <returns>List of shortened URLs</returns>
+            <response code="200">Shortened URLs retrieved successfully</response>
+            <response code="401">User not authenticated</response>
+            <response code="404">No shortened URLs found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:TeenyWeenyURL.Controller.ShortUrlsController.DeleteShortUrl(System.Int32)">
+            <summary>
+            Deletes a specific shortened URL by ID
+            </summary>
+            <param name="id">The ID of the shortened URL to delete</param>
+            <returns>No content if successful</returns>
+            <response code="204">Shortened URL deleted successfully</response>
+            <response code="401">User not authenticated</response>
+            <response code="404">Shortened URL not found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="T:TeenyWeenyURL.Controller.UserController">
+            <summary>
+            Controller for handling user profile operations
+            </summary>
+        </member>
+        <member name="M:TeenyWeenyURL.Controller.UserController.#ctor(TeenyWeenyURL.Services.IUserService,Microsoft.Extensions.Logging.ILogger{TeenyWeenyURL.Controller.UserController})">
+            <summary>
+            Initializes a new instance of the UserController
+            </summary>
+            <param name="userService">The user service</param>
+            <param name="logger">The logger</param>
+        </member>
+        <member name="M:TeenyWeenyURL.Controller.UserController.EditMyProfile(TeenyWeenyURL.Model.DTO.EditUserRequest)">
+            <summary>
+            Updates the profile of the authenticated user
+            </summary>
+            <param name="request">The user update request</param>
+            <returns>Updated user information</returns>
+            <response code="200">User profile updated successfully</response>
+            <response code="401">User not authenticated</response>
+            <response code="404">User not found</response>
+            <response code="400">Invalid request data</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:TeenyWeenyURL.Controller.UserController.DeleteMyProfile">
+            <summary>
+            Deletes the profile of the authenticated user
+            </summary>
+            <returns>No content if successful</returns>
+            <response code="204">User profile deleted successfully</response>
+            <response code="401">User not authenticated</response>
+            <response code="404">User not found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="T:TeenyWeenyURL.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:TeenyWeenyURL.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:TeenyWeenyURL.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:TeenyWeenyURL.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:TeenyWeenyURL.Migrations.ChangeUrlsTableToShortUrls">
+            <inheritdoc />
+        </member>
+        <member name="M:TeenyWeenyURL.Migrations.ChangeUrlsTableToShortUrls.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:TeenyWeenyURL.Migrations.ChangeUrlsTableToShortUrls.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:TeenyWeenyURL.Migrations.ChangeUrlsTableToShortUrls.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:TeenyWeenyURL.Model.DTO.CreateShortUrlRequest">
+            <summary>
+            Request model for creating a new shortened URL
+            </summary>
+        </member>
+        <member name="P:TeenyWeenyURL.Model.DTO.CreateShortUrlRequest.OriginalUrl">
+            <summary>
+            The original URL to be shortened
+            </summary>
+            <example>https://www.example.com/very-long-url-that-needs-to-be-shortened</example>
+        </member>
+        <member name="P:TeenyWeenyURL.Model.DTO.CreateShortUrlRequest.UserId">
+            <summary>
+            The ID of the user creating the shortened URL
+            </summary>
+            <example>1</example>
+        </member>
+        <member name="T:TeenyWeenyURL.Model.DTO.CreateUserRequest">
+            <summary>
+            Request model for creating a new user account
+            </summary>
+        </member>
+        <member name="P:TeenyWeenyURL.Model.DTO.CreateUserRequest.Username">
+            <summary>
+            The username for the new account. Must be 3-50 characters and contain only letters, numbers, underscores, and hyphens
+            </summary>
+            <example>john_doe</example>
+        </member>
+        <member name="P:TeenyWeenyURL.Model.DTO.CreateUserRequest.Password">
+            <summary>
+            The password for the new account. Must be 6-100 characters and contain at least one uppercase letter, one lowercase letter, one number, and one special character
+            </summary>
+            <example>MySecureP@ss123</example>
+        </member>
+        <member name="T:TeenyWeenyURL.Model.DTO.EditUserRequest">
+            <summary>
+            Request model for editing user information
+            </summary>
+        </member>
+        <member name="P:TeenyWeenyURL.Model.DTO.EditUserRequest.Username">
+            <summary>
+            The new username. Must be 3-50 characters and contain only letters, numbers, underscores, and hyphens
+            </summary>
+            <example>new_username</example>
+        </member>
+        <member name="P:TeenyWeenyURL.Model.DTO.EditUserRequest.Password">
+            <summary>
+            The new password. Must be 6-100 characters and contain at least one uppercase letter, one lowercase letter, one number, and one special character
+            </summary>
+            <example>NewSecureP@ss123</example>
+        </member>
+        <member name="T:TeenyWeenyURL.Model.DTO.LoginUserRequest">
+            <summary>
+            Request model for user login
+            </summary>
+        </member>
+        <member name="P:TeenyWeenyURL.Model.DTO.LoginUserRequest.Username">
+            <summary>
+            The username for login
+            </summary>
+            <example>john_doe</example>
+        </member>
+        <member name="P:TeenyWeenyURL.Model.DTO.LoginUserRequest.Password">
+            <summary>
+            The password for login
+            </summary>
+            <example>MySecureP@ss123</example>
+        </member>
+        <member name="T:TeenyWeenyURL.Model.DTO.ShortUrlResponse">
+            <summary>
+            Response model for shortened URL information
+            </summary>
+        </member>
+        <member name="P:TeenyWeenyURL.Model.DTO.ShortUrlResponse.ShortCode">
+            <summary>
+            The short code used to identify the shortened URL
+            </summary>
+            <example>abc123</example>
+        </member>
+        <member name="P:TeenyWeenyURL.Model.DTO.ShortUrlResponse.OriginalUrl">
+            <summary>
+            The original URL that was shortened
+            </summary>
+            <example>https://www.example.com/very-long-url-that-needs-to-be-shortened</example>
+        </member>
+        <member name="P:TeenyWeenyURL.Model.DTO.ShortUrlResponse.Clicks">
+            <summary>
+            The number of times this shortened URL has been clicked
+            </summary>
+            <example>42</example>
+        </member>
+        <member name="P:TeenyWeenyURL.Model.DTO.ShortUrlResponse.CreatedAt">
+            <summary>
+            The date and time when this shortened URL was created
+            </summary>
+            <example>2024-01-15T10:30:00Z</example>
+        </member>
+        <member name="T:TeenyWeenyURL.Model.DTO.UserResponse">
+            <summary>
+            Response model for user information including their shortened URLs
+            </summary>
+        </member>
+        <member name="P:TeenyWeenyURL.Model.DTO.UserResponse.Username">
+            <summary>
+            The unique username of the user
+            </summary>
+            <example>john_doe</example>
+        </member>
+        <member name="P:TeenyWeenyURL.Model.DTO.UserResponse.Urls">
+            <summary>
+            Collection of shortened URLs associated with this user
+            </summary>
+        </member>
+        <member name="M:TeenyWeenyURL.Services.ShortUrlService.IsValidShortCode(System.String)">
+            <summary>
+            Validates if the short code format is correct
+            </summary>
+            <param name="shortCode">The short code to validate</param>
+            <returns>True if valid, false otherwise</returns>
+        </member>
+    </members>
+</doc>

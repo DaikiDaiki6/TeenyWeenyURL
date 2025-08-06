@@ -28,9 +28,12 @@ public class UserService : IUserService
         return true;
     }
 
-    public async Task<User?> EditUserAsync(EditUserRequest request, int id)
+    public async Task<UserResponse?> EditUserAsync(EditUserRequest request, int id)
     {
-        var user = await _context.Users.FindAsync(id);
+        var user = await _context.Users
+            .Include(u => u.Urls)
+            .FirstOrDefaultAsync(u => u.Id == id);
+            
         if (user == null) return null;
 
         // Check if username is being changed and if it's already taken
@@ -49,6 +52,18 @@ public class UserService : IUserService
         }
 
         await _context.SaveChangesAsync();
-        return user;
+        
+        // Return DTO to avoid circular references
+        return new UserResponse
+        {
+            Username = user.Username,
+            Urls = user.Urls.Select(u => new ShortUrlResponse
+            {
+                ShortCode = u.ShortCode,
+                OriginalUrl = u.OriginalUrl,
+                Clicks = u.Clicks,
+                CreatedAt = u.CreatedAt
+            }).ToList()
+        };
     }
 }

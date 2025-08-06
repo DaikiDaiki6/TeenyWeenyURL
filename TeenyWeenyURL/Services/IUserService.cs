@@ -6,7 +6,6 @@ namespace TeenyWeenyURL.Services;
 
 public interface IUserService
 {
-    Task<User?> EditUserAsync(EditUserRequest request, int id);
+    Task<UserResponse?> EditUserAsync(EditUserRequest request, int id);
     Task<bool> DeleteUserAsync(int id);
-
 }
