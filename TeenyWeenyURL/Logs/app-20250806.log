@@ -74,3 +74,13 @@ RETURNING "Id";
 2025-08-06 11:59:42.207 +08:00 [INF] HTTP POST /api/ShortUrls/create-twurl responded 200 in 233.6478 ms
 2025-08-06 11:59:42.209 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5140/api/ShortUrls/create-twurl - 200 null application/json; charset=utf-8 243.9308ms
 2025-08-06 12:02:40.666 +08:00 [INF] Application is shutting down...
+2025-08-06 20:49:54.108 +08:00 [INF] User profile is available. Using 'C:\Users\jeffr\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-06 20:49:54.221 +08:00 [INF] Now listening on: http://localhost:5140
+2025-08-06 20:49:54.223 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-06 20:49:54.224 +08:00 [INF] Hosting environment: Development
+2025-08-06 20:49:54.225 +08:00 [INF] Content root path: C:\Users\jeffr\Documents\Programming\TeenyWeenyURL\TeenyWeenyURL
+2025-08-06 20:50:19.169 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/swagger/index.html - null null
+2025-08-06 20:50:19.309 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/swagger/index.html - 200 null text/html;charset=utf-8 140.1993ms
+2025-08-06 20:50:19.439 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/swagger/v1/swagger.json - null null
+2025-08-06 20:50:19.587 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 148.5093ms
+2025-08-06 22:35:45.648 +08:00 [INF] Application is shutting down...

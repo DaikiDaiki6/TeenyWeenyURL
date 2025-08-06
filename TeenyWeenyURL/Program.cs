@@ -120,9 +120,11 @@ builder.Services.AddControllers();
 // CORS SETTINGS
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAll", policy =>
+    options.AddPolicy("AllowFrontend", policy =>
     {
-        policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+        policy.WithOrigins("http://localhost:5173")
+        .AllowAnyHeader()
+        .AllowAnyMethod();
     });
 });
 
@@ -148,7 +150,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 // CORS RUN
-app.UseCors("AllowAll");
+app.UseCors("AllowFrontend");
 
 // HTTPS RUN
 app.UseHttpsRedirection();
