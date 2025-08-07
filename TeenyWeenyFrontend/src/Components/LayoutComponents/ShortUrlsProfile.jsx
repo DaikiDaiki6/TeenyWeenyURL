@@ -22,6 +22,14 @@ export default function ShortUrlsProfile() {
             </td>
           </tr>
           <tr>
+            <td>Clicks</td>
+            <td>255</td>
+          </tr>
+          <tr>
+            <td>Created</td>
+            <td>May 6, 2003</td>
+          </tr>
+          <tr>
             <td>Note (Optional)</td>
             <td>This is the Short url for a video that I like watching!</td>
           </tr>
