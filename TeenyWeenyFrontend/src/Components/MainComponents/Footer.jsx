@@ -1,19 +1,19 @@
 export default function Footer() {
   return (
-    <footer className="bg-white/10 backdrop-blur-xl border-t border-white/20 shadow-lg">
+    <footer className="bg-white/5 backdrop-blur-md border-t border-white/10 shadow-sm">
       <div className="max-w-7xl mx-auto px-6 py-8">
         <nav>
-          <ul className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8 text-gray-300">
+          <ul className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8 text-slate-400">
             <li className="flex items-center space-x-2">
-              <span className="w-2 h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></span>
-              <span className="font-semibold">Created by: Daiki</span>
+              <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+              <span className="font-medium">Created by: Daiki</span>
             </li>
             <li>
               <a
                 href="https://github.com/DaikiDaiki6/TeenyWeenyURL"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-purple-400 hover:text-purple-300 font-semibold hover:underline transition-colors duration-300 flex items-center space-x-2"
+                className="text-blue-400 hover:text-blue-300 font-medium hover:underline transition-colors duration-200 flex items-center space-x-2"
               >
                 <svg
                   className="w-5 h-5"
@@ -30,8 +30,8 @@ export default function Footer() {
               </a>
             </li>
             <li className="flex items-center space-x-2">
-              <span className="w-2 h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></span>
-              <span className="font-semibold">All rights reserved (2025)</span>
+              <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+              <span className="font-medium">All rights reserved (2025)</span>
             </li>
           </ul>
         </nav>

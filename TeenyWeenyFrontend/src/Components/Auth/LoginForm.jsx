@@ -71,22 +71,22 @@ export default function LoginForm() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 px-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 px-4">
       <div className="w-full max-w-md">
-        <div className="bg-white/10 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/20 p-8 space-y-6">
+        <div className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 p-8 space-y-6 shadow-xl">
           <div className="text-center">
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Welcome Back
-            </h1>
-            <p className="text-gray-300 mt-2">Sign in to your account</p>
+            <h1 className="text-2xl font-semibold text-white">Welcome Back</h1>
+            <p className="text-slate-400 mt-2 text-sm">
+              Sign in to your account
+            </p>
           </div>
 
           {loginMessage && (
             <div
-              className={`p-3 rounded-lg text-center ${
+              className={`p-3 rounded-lg text-center text-sm ${
                 loginMessage.includes("successful")
-                  ? "bg-green-500/20 text-green-300 border border-green-500/30"
-                  : "bg-red-500/20 text-red-300 border border-red-500/30"
+                  ? "bg-emerald-500/10 text-emerald-300 border border-emerald-500/20"
+                  : "bg-red-500/10 text-red-300 border border-red-500/20"
               }`}
             >
               {loginMessage}
@@ -101,7 +101,7 @@ export default function LoginForm() {
                 name="username"
                 value={loginData.username}
                 onChange={inputCheck}
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
+                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-blue-400 focus:border-blue-400 transition-all duration-200"
               />
             </div>
             <div>
@@ -111,7 +111,7 @@ export default function LoginForm() {
                 name="password"
                 value={loginData.password}
                 onChange={inputCheck}
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
+                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-blue-400 focus:border-blue-400 transition-all duration-200"
               />
             </div>
             <button
@@ -121,23 +121,23 @@ export default function LoginForm() {
                 !loginData.username.trim() ||
                 !loginData.password.trim()
               }
-              className={`w-full font-semibold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg ${
+              className={`w-full font-medium py-3 px-6 rounded-lg transition-all duration-200 ${
                 loading ||
                 !loginData.username.trim() ||
                 !loginData.password.trim()
-                  ? "bg-gray-500 text-gray-300 cursor-not-allowed opacity-50"
-                  : "bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 transform hover:scale-105 hover:shadow-purple-500/25"
+                  ? "bg-slate-600 text-slate-400 cursor-not-allowed"
+                  : "bg-blue-600 text-white hover:bg-blue-700 hover:shadow-lg"
               }`}
             >
               {loading ? "Signing In..." : "Sign In"}
             </button>
           </form>
 
-          <p className="text-center text-gray-300">
+          <p className="text-center text-slate-400 text-sm">
             Don't have an account yet?{" "}
             <Link
               to="/register"
-              className="text-purple-400 hover:text-purple-300 font-semibold hover:underline transition-colors duration-300"
+              className="text-blue-400 hover:text-blue-300 font-medium hover:underline transition-colors duration-200"
             >
               Sign up
             </Link>
