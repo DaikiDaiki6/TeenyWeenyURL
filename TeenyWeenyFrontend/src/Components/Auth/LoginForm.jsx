@@ -8,7 +8,7 @@ export default function LoginForm() {
       <input type="password" placeholder="Enter password..." />
       <button type="submit">Log In</button>
       <p>
-        Don't have an account yet?{" "}<Link to="/register">Sign up</Link>
+        Don't have an account yet? <Link to="/register">Sign up</Link>
       </p>
     </div>
   );

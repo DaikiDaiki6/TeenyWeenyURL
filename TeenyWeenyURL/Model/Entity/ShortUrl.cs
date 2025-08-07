@@ -9,6 +9,7 @@ public class ShortUrl
     public string ShortCode { get; set; } = null!;
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public int Clicks { get; set; }
+    public string? Note { get; set; }
     // Required relationship with User
     public int UserId { get; set; }
     public User User { get; set; } = null!;

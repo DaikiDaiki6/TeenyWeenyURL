@@ -1,4 +1,5 @@
 using System;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 using TeenyWeenyURL.Model.DTO;
@@ -16,7 +17,7 @@ public class AuthController : ControllerBase
 {
     private readonly AuthService _authService;
     private readonly ILogger<AuthController> _logger;
-    
+
     /// <summary>
     /// Initializes a new instance of the AuthController
     /// </summary>
@@ -61,7 +62,7 @@ public class AuthController : ControllerBase
                 return Conflict(new { message = "User already exists." });
             }
 
-            _logger.LogInformation("User registered successfully: {Username} with ID: {UserId}", 
+            _logger.LogInformation("User registered successfully: {Username} with ID: {UserId}",
                 newUser.Username, newUser.Id);
 
             return Ok(new
@@ -101,10 +102,10 @@ public class AuthController : ControllerBase
     public async Task<IActionResult> Login(LoginUserRequest request)
     {
         _logger.LogInformation("User login attempt: {Username}", request.Username);
-        
+
         try
         {
-            var token = await _authService.LoginUser(request); 
+            var token = await _authService.LoginUser(request);
             if (token is null)
             {
                 _logger.LogWarning("Login failed - invalid credentials for user: {Username}", request.Username);
@@ -124,5 +125,22 @@ public class AuthController : ControllerBase
             _logger.LogError(ex, "Error logging in user: {Username}", request.Username);
             return StatusCode(500, new { message = "Internal server error during login." });
         }
+    }
+
+    [Authorize]
+    [HttpGet("check")]
+    public IActionResult TestAuth()
+    {
+        var userId = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+        var username = User.FindFirst(System.Security.Claims.ClaimTypes.Name)?.Value;
+
+        _logger.LogInformation("Authentication check for user: {Username} (ID: {UserId})", username, userId);
+        return Ok(new
+        {
+            userId = userId,
+            username = username,
+            message = "Authenticated!",
+            timestamp = DateTime.UtcNow,
+        });
     }
 }

@@ -25,7 +25,8 @@ public class ShortUrlService : IShortUrlService
             OriginalUrl = request.OriginalUrl,
             ShortCode = shortCode,
             CreatedAt = DateTime.UtcNow,
-            UserId = request.UserId
+            UserId = request.UserId,
+            Note = request.Note,
         };
 
         _context.ShortUrls.Add(entity);
@@ -34,12 +35,23 @@ public class ShortUrlService : IShortUrlService
         return shortCode;
     }
 
+    public async Task<bool> EditShortUrlAsync(EditShortUrlRequest request, int id, int userId)
+    {
+        var existingUrl = await _context.ShortUrls.FirstOrDefaultAsync(i => i.Id == id && i.UserId == userId);
+        if (existingUrl is null) return false;
+
+        existingUrl.Note = request.Note;
+        await _context.SaveChangesAsync();
+
+        return true;
+    }
+
     public async Task<bool> DeleteShortUrlAsync(int id, int userId)
     {
         var shortUrl = await _context.ShortUrls.FirstOrDefaultAsync(i => i.Id == id && i.UserId == userId);
 
         if (shortUrl is null) return false;
-        
+
         _context.ShortUrls.Remove(shortUrl);
         await _context.SaveChangesAsync();
 
@@ -83,7 +95,8 @@ public class ShortUrlService : IShortUrlService
                 ShortCode = s.ShortCode,
                 OriginalUrl = s.OriginalUrl,
                 Clicks = s.Clicks,
-                CreatedAt = s.CreatedAt
+                CreatedAt = s.CreatedAt,
+                Note = s.Note
             })
             .ToListAsync();
 
@@ -126,4 +139,6 @@ public class ShortUrlService : IShortUrlService
 
         return true;
     }
+
+    
 }

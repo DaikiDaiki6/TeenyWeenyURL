@@ -10,6 +10,7 @@ import Profile from "../LayoutComponents/Profile";
 import ShortUrlsProfile from "../LayoutComponents/ShortUrlsProfile";
 import NotFound from "../MainComponents/NotFound";
 import MainLayout from "../MainComponents/MainLayout";
+import EditUrl from "../LayoutComponents/EditUrl";
 
 const rootRoute = createRootRoute({
   component: MainLayout,
@@ -40,6 +41,13 @@ const profileRoute = createRoute({
   component: Profile,
 });
 
+const editUrlRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/edit-url",
+  component: EditUrl,
+});
+
+
 const shortUrlsRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/short-urls",
@@ -57,6 +65,7 @@ const routeTree = rootRoute.addChildren([
   registerRoute,
   dashboardRoute,
   profileRoute,
+  editUrlRoute,
   shortUrlsRoute,
   notFoundRoute,
 ]);

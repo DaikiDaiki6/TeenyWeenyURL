@@ -19,7 +19,7 @@ public class CreateShortUrlRequest
     [StringLength(2048, ErrorMessage = "URL cannot exceed 2048 characters")]
     [SwaggerSchema(Description = "The original URL to be shortened")]
     public string OriginalUrl { get; set; } = null!;
-    
+
     /// <summary>
     /// The ID of the user creating the shortened URL
     /// </summary>
@@ -28,4 +28,12 @@ public class CreateShortUrlRequest
     [Range(1, int.MaxValue, ErrorMessage = "User ID must be a positive number")]
     [SwaggerSchema(Description = "The ID of the user creating the shortened URL")]
     public int UserId { get; set; }
+
+    /// <summary>
+    /// The Note for the Short URL (optional)
+    /// </summary>
+    /// <example>Short URL for a youtube video</example>
+    [StringLength(5000, ErrorMessage = "Note cannot exceed 5000 characters")]
+    [SwaggerSchema(Description = "The Note for the Short URL (optional)")]
+    public string? Note { get; set; }
 }

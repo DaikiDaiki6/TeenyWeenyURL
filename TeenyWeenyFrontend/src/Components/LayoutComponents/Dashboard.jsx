@@ -1,12 +1,18 @@
-import {Link} from "@tanstack/react-router"
+import { Link } from "@tanstack/react-router";
 
 export default function Dashboard() {
   return (
     <div className="flex flex-col items-center">
-      <div>
-        <h1>Welcome to Teeny-Weeny URL!</h1>
-        <p>The Website for shortening the URLS you have idk man</p>
+      <div className="flex">
+        <div>
+          <img src="/logo_only.svg" alt="logo" className="w-50"/>
+        </div>
+        <div className="flex flex-col items-center justify-center">
+          <h1>Welcome to Teeny-Weeny URL!</h1>
+          <p>The Website for shortening the URLS you have idk man</p>
+        </div>
       </div>
+
       <div>
         <h1>Your Short Urls...</h1>
         <table>
@@ -18,18 +24,18 @@ export default function Dashboard() {
           </thead>
           <tbody>
             <tr>
-                
-                <td>
-                    <a href="https://twurl.com/daikii">https://twurl.com/daikii</a>
-                </td>
-                <td>
-                    <a href="https://www.youtube.com/watch?v=fri_S6b5Ntc">https://www.youtube.com/watch?v=fri_S6b5Ntc</a>
-                </td>
-                <td>
-                    <Link to="/short-urls">
-                    Edit
-                    </Link>
-                </td>
+              <td>
+                <a href="https://twurl.com/daikii">https://twurl.com/daikii</a>
+              </td>
+              <td>
+                <a href="https://www.youtube.com/watch?v=fri_S6b5Ntc">
+                  https://www.youtube.com/watch?v=fri_S6b5Ntc
+                </a>
+              </td>
+              <td>
+                <Link to="/edit-url">Edit</Link>
+                <Link to="/short-urls">Info</Link>
+              </td>
             </tr>
           </tbody>
         </table>

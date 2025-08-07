@@ -104,6 +104,18 @@
             <response code="404">Shortened URL not found</response>
             <response code="500">Internal server error</response>
         </member>
+        <member name="M:TeenyWeenyURL.Controller.ShortUrlsController.EditShortUrl(System.Int32,TeenyWeenyURL.Model.DTO.EditShortUrlRequest)">
+            <summary>
+            Edit a specific shortened URL Note by ID
+            </summary>
+            <param name="id">The ID of the shortened URL to edit</param>
+            <param name="request">The edit request containing the note</param>
+            <returns>Ok if successful</returns>
+            <response code="200">Shortened URL edited successfully</response>
+            <response code="401">User not authenticated</response>
+            <response code="404">Shortened URL not found</response>
+            <response code="500">Internal server error</response>
+        </member>
         <member name="T:TeenyWeenyURL.Controller.UserController">
             <summary>
             Controller for handling user profile operations
@@ -162,6 +174,18 @@
         <member name="M:TeenyWeenyURL.Migrations.ChangeUrlsTableToShortUrls.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
+        <member name="T:TeenyWeenyURL.Migrations.AddNoteToShortUrls">
+            <inheritdoc />
+        </member>
+        <member name="M:TeenyWeenyURL.Migrations.AddNoteToShortUrls.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:TeenyWeenyURL.Migrations.AddNoteToShortUrls.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:TeenyWeenyURL.Migrations.AddNoteToShortUrls.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
         <member name="T:TeenyWeenyURL.Model.DTO.CreateShortUrlRequest">
             <summary>
             Request model for creating a new shortened URL
@@ -179,6 +203,12 @@
             </summary>
             <example>1</example>
         </member>
+        <member name="P:TeenyWeenyURL.Model.DTO.CreateShortUrlRequest.Note">
+            <summary>
+            The Note for the Short URL (optional)
+            </summary>
+            <example>Short URL for a youtube video</example>
+        </member>
         <member name="T:TeenyWeenyURL.Model.DTO.CreateUserRequest">
             <summary>
             Request model for creating a new user account
@@ -195,6 +225,17 @@
             The password for the new account. Must be 6-100 characters and contain at least one uppercase letter, one lowercase letter, one number, and one special character
             </summary>
             <example>MySecureP@ss123</example>
+        </member>
+        <member name="T:TeenyWeenyURL.Model.DTO.EditShortUrlRequest">
+            <summary>
+            Request model for creating a new shortened URL
+            </summary>
+        </member>
+        <member name="P:TeenyWeenyURL.Model.DTO.EditShortUrlRequest.Note">
+            <summary>
+            The Note for the Short URL (optional)
+            </summary>
+            <example>Short URL for a youtube video</example>
         </member>
         <member name="T:TeenyWeenyURL.Model.DTO.EditUserRequest">
             <summary>
@@ -298,6 +339,12 @@
             The date and time when this shortened URL was created
             </summary>
             <example>2024-01-15T10:30:00Z</example>
+        </member>
+        <member name="P:TeenyWeenyURL.Model.DTO.ShortUrlResponse.Note">
+            <summary>
+            The note associated with this shortened URL (optional)
+            </summary>
+            <example>Short URL for a youtube video</example>
         </member>
         <member name="T:TeenyWeenyURL.Model.DTO.UserResponse">
             <summary>

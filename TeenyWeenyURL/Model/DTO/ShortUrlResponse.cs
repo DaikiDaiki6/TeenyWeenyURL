@@ -37,4 +37,11 @@ public class ShortUrlResponse
     /// <example>2024-01-15T10:30:00Z</example>
     [SwaggerSchema(Description = "The date and time when this shortened URL was created")]
     public DateTime CreatedAt { get; set; }
+    
+    /// <summary>
+    /// The note associated with this shortened URL (optional)
+    /// </summary>
+    /// <example>Short URL for a youtube video</example>
+    [SwaggerSchema(Description = "The note associated with this shortened URL (optional)")]
+    public string? Note { get; set; }
 }

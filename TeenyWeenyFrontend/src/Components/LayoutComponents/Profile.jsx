@@ -20,7 +20,8 @@ export default function Profile() {
               <td>https://twurl.com/daikii</td>
               <td>https://www.youtube.com/watch?v=fri_S6b5Ntc</td>
               <td>
-                <Link to="/short-urls">Edit</Link>
+                <Link to="/edit-url">Edit</Link>
+                <Link to="/short-urls">Info</Link>
               </td>
             </tr>
           </tbody>

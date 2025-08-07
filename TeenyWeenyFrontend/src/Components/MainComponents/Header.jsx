@@ -9,7 +9,7 @@ export default function Header() {
       <div>
         <div className="flex items-center justify-between px-10 mb-auto ">
           <Link to="/">
-            <img src="/darkmode_logo.svg" alt="logo"  className="w-27 "/>
+            <img src="/darkmode_logo.svg" alt="logo" className="w-27 " />
           </Link>
           <SearchUrl />
           <Link to="/profile">

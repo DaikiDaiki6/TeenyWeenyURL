@@ -21,7 +21,7 @@ public class ShortUrlsController : ControllerBase
 {
     private readonly IShortUrlService _shortUrlService;
     private readonly ILogger<ShortUrlsController> _logger;
-    
+
     /// <summary>
     /// Initializes a new instance of the ShortUrlsController
     /// </summary>
@@ -62,22 +62,22 @@ public class ShortUrlsController : ControllerBase
             return Unauthorized();
         }
 
-        _logger.LogInformation("Creating short URL for user {UserId} with original URL: {OriginalUrl}", 
+        _logger.LogInformation("Creating short URL for user {UserId} with original URL: {OriginalUrl}",
             userId, request.OriginalUrl);
 
         try
         {
             request.UserId = userId;
             var shortCode = await _shortUrlService.CreateShortUrlAsync(request);
-            
-            _logger.LogInformation("Short URL created successfully for user {UserId} with code: {ShortCode}", 
+
+            _logger.LogInformation("Short URL created successfully for user {UserId} with code: {ShortCode}",
                 userId, shortCode);
-                
+
             return Ok(new { ShortUrl = $"https://twurl.com/{shortCode}" });
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Error creating short URL for user {UserId} with original URL: {OriginalUrl}", 
+            _logger.LogError(ex, "Error creating short URL for user {UserId} with original URL: {OriginalUrl}",
                 userId, request.OriginalUrl);
             return StatusCode(500, new { message = "Internal server error while creating short URL." });
         }
@@ -102,7 +102,7 @@ public class ShortUrlsController : ControllerBase
     [SwaggerResponse(401, "User not authenticated")]
     [SwaggerResponse(404, "No shortened URLs found")]
     [SwaggerResponse(500, "Internal server error")]
-    public async Task<IActionResult> GetShortUrlPerUserId([FromQuery] int page=1, [FromQuery] int pageSize=10)
+    public async Task<IActionResult> GetShortUrlPerUserId([FromQuery] int page = 1, [FromQuery] int pageSize = 10)
     {
         var currentUserId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
         if (string.IsNullOrEmpty(currentUserId) || !int.TryParse(currentUserId, out int userId))
@@ -114,7 +114,7 @@ public class ShortUrlsController : ControllerBase
         if (page < 1) page = 1;
         if (pageSize < 1 || pageSize > 100) pageSize = 10;
 
-        _logger.LogInformation("Retrieving short URLs for user {UserId} - Page: {Page}, PageSize: {PageSize}", 
+        _logger.LogInformation("Retrieving short URLs for user {UserId} - Page: {Page}, PageSize: {PageSize}",
         userId, page, pageSize);
 
         try
@@ -183,6 +183,57 @@ public class ShortUrlsController : ControllerBase
         {
             _logger.LogError(ex, "Error deleting short URL {Id} for user {UserId}", id, userId);
             return StatusCode(500, new { message = "Internal server error while deleting short URL." });
+        }
+    }
+    
+    /// <summary>
+    /// Edit a specific shortened URL Note by ID
+    /// </summary>
+    /// <param name="id">The ID of the shortened URL to edit</param>
+    /// <param name="request">The edit request containing the note</param>
+    /// <returns>Ok if successful</returns>
+    /// <response code="200">Shortened URL edited successfully</response>
+    /// <response code="401">User not authenticated</response>
+    /// <response code="404">Shortened URL not found</response>
+    /// <response code="500">Internal server error</response>
+    [HttpPatch("{id:int}")]
+    [SwaggerOperation(
+        Summary = "Edit a shortened URL",
+        Description = "Edit a specific shortened URL by ID for the authenticated user",
+        OperationId = "EditShortUrl",
+        Tags = new[] { "Short URLs" }
+    )]
+    [SwaggerResponse(200, "Shortened URL edited successfully")]
+    [SwaggerResponse(401, "User not authenticated")]
+    [SwaggerResponse(404, "Shortened URL not found")]
+    [SwaggerResponse(500, "Internal server error")]
+    public async Task<IActionResult> EditShortUrl(int id, EditShortUrlRequest request)
+    {
+        var currentUserId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        if (string.IsNullOrEmpty(currentUserId) || !int.TryParse(currentUserId, out int userId))
+        {
+            _logger.LogWarning("Unauthorized access attempt to edit short URL {Id}", id);
+            return Unauthorized();
+        }
+
+        _logger.LogInformation("Editing short URL {Id} for user {UserId}", id, userId);
+
+        try
+        {
+            var success = await _shortUrlService.EditShortUrlAsync(request, id, userId);
+            if (!success)
+            {
+                _logger.LogWarning("Short URL {Id} not found for user {UserId}", id, userId);
+                return NotFound(new { message = "Short URL not found" });
+            }
+
+            _logger.LogInformation("Short URL {Id} edited successfully for user {UserId}", id, userId);
+            return Ok(new { message = "Short URL edited successfully", id });
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error editing short URL {Id} for user {UserId}", id, userId);
+            return StatusCode(500, new { message = "Internal server error while editing short URL." });
         }
     }
 }

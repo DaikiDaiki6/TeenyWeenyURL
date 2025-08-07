@@ -3,6 +3,7 @@ import axiosInstance from "./axios";
 export const AuthService = {
     register: (userData) => axiosInstance.post("/api/Auth/register", userData),
     login: (credentials) => axiosInstance.post("/api/Auth/login", credentials),
+    authCheck: () => axiosInstance.get("/api/Auth/check"),
 }
 
 export const ShortUrlsService = {
