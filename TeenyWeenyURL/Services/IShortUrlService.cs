@@ -6,7 +6,7 @@ namespace TeenyWeenyURL.Services;
 
 public interface IShortUrlService
 {
-    Task<List<ShortUrlResponse>?> GetShortUrlsPerUsersId(int id);
+    Task<PaginatedUrlsResponse<ShortUrlResponse>?> GetShortUrlsPerUsersId(int id, int page, int pageSize);
     Task<string> CreateShortUrlAsync(CreateShortUrlRequest request);
     Task<string?> GetOriginalUrlAsync(string shortCode);
     Task<bool> DeleteShortUrlAsync(int id, int userId);

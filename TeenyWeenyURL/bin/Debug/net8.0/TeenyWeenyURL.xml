@@ -83,7 +83,7 @@
             <response code="400">Invalid request data</response>
             <response code="500">Internal server error</response>
         </member>
-        <member name="M:TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId">
+        <member name="M:TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId(System.Int32,System.Int32)">
             <summary>
             Retrieves all shortened URLs for the authenticated user
             </summary>
@@ -229,6 +229,46 @@
             The password for login
             </summary>
             <example>MySecureP@ss123</example>
+        </member>
+        <member name="T:TeenyWeenyURL.Model.DTO.PaginatedUrlsResponse`1">
+            <summary>
+            Generic paginated response model
+            </summary>
+        </member>
+        <member name="P:TeenyWeenyURL.Model.DTO.PaginatedUrlsResponse`1.Items">
+            <summary>
+            The items for the current page
+            </summary>
+        </member>
+        <member name="P:TeenyWeenyURL.Model.DTO.PaginatedUrlsResponse`1.CurrentPage">
+            <summary>
+            Current page number (1-based)
+            </summary>
+        </member>
+        <member name="P:TeenyWeenyURL.Model.DTO.PaginatedUrlsResponse`1.PageSize">
+            <summary>
+            Number of items per page
+            </summary>
+        </member>
+        <member name="P:TeenyWeenyURL.Model.DTO.PaginatedUrlsResponse`1.TotalItems">
+            <summary>
+            Total number of items
+            </summary>
+        </member>
+        <member name="P:TeenyWeenyURL.Model.DTO.PaginatedUrlsResponse`1.TotalPages">
+            <summary>
+            Total number of pages
+            </summary>
+        </member>
+        <member name="P:TeenyWeenyURL.Model.DTO.PaginatedUrlsResponse`1.HasNextPage">
+            <summary>
+            Whether there is a next page
+            </summary>
+        </member>
+        <member name="P:TeenyWeenyURL.Model.DTO.PaginatedUrlsResponse`1.HasPreviousPage">
+            <summary>
+            Whether there is a previous page
+            </summary>
         </member>
         <member name="T:TeenyWeenyURL.Model.DTO.ShortUrlResponse">
             <summary>

@@ -26,8 +26,8 @@ public class CreateUserRequest
     /// <example>MySecureP@ss123</example>
     [Required(ErrorMessage = "Password is required")]
     [StringLength(100, MinimumLength = 6, ErrorMessage = "Password must be between 6 and 100 characters")]
-    [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]", 
-        ErrorMessage = "Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character")]
+    [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$", 
+    ErrorMessage = "Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character")]
     [SwaggerSchema(Description = "The password for the new account. Must be 6-100 characters and contain at least one uppercase letter, one lowercase letter, one number, and one special character")]
     public string Password { get; set; } = null!;
 }

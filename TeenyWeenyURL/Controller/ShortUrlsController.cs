@@ -102,7 +102,7 @@ public class ShortUrlsController : ControllerBase
     [SwaggerResponse(401, "User not authenticated")]
     [SwaggerResponse(404, "No shortened URLs found")]
     [SwaggerResponse(500, "Internal server error")]
-    public async Task<IActionResult> GetShortUrlPerUserId()
+    public async Task<IActionResult> GetShortUrlPerUserId([FromQuery] int page=1, [FromQuery] int pageSize=10)
     {
         var currentUserId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
         if (string.IsNullOrEmpty(currentUserId) || !int.TryParse(currentUserId, out int userId))
@@ -111,19 +111,23 @@ public class ShortUrlsController : ControllerBase
             return Unauthorized();
         }
 
-        _logger.LogInformation("Retrieving short URLs for user {UserId}", userId);
+        if (page < 1) page = 1;
+        if (pageSize < 1 || pageSize > 100) pageSize = 10;
+
+        _logger.LogInformation("Retrieving short URLs for user {UserId} - Page: {Page}, PageSize: {PageSize}", 
+        userId, page, pageSize);
 
         try
         {
-            var shortUrls = await _shortUrlService.GetShortUrlsPerUsersId(userId);
-            if (shortUrls is null || !shortUrls.Any())
+            var paginatedResult = await _shortUrlService.GetShortUrlsPerUsersId(userId, page, pageSize);
+            if (paginatedResult is null || !paginatedResult.Items.Any())
             {
                 _logger.LogInformation("No short URLs found for user {UserId}", userId);
                 return NotFound(new { message = "No Short Urls Found." });
             }
 
-            _logger.LogInformation("Retrieved {Count} short URLs for user {UserId}", shortUrls.Count, userId);
-            return Ok(shortUrls);
+            _logger.LogInformation("Retrieved {Count} short URLs for user {UserId} (Page {Page} of {TotalPages})", paginatedResult.Items.Count, userId, page, paginatedResult.TotalPages);
+            return Ok(paginatedResult);
         }
         catch (Exception ex)
         {

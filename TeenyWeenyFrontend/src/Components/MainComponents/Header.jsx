@@ -7,21 +7,13 @@ export default function Header() {
   return (
     <header>
       <div>
-        <div className="flex items-center justify-between px-6 py-3 mb-auto ">
-          <div className="flex space-x-2">
-            <>
-              <Link to="/">
-                <img src="/vite.svg" alt="logo" />
-              </Link>
-            </>
-            <>
-              <Link to="/">twurl</Link>
-            </>
-          </div>
-
+        <div className="flex items-center justify-between px-10 mb-auto ">
+          <Link to="/">
+            <img src="/darkmode_logo.svg" alt="logo"  className="w-27 "/>
+          </Link>
           <SearchUrl />
           <Link to="/profile">
-            Profile-Dropdown
+            Profile
             {/* for Profile/Login/Logout */}
           </Link>
         </div>

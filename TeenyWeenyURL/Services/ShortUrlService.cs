@@ -63,12 +63,21 @@ public class ShortUrlService : IShortUrlService
         return entity?.OriginalUrl;
     }
 
-    public async Task<List<ShortUrlResponse>?> GetShortUrlsPerUsersId(int id)
+    public async Task<PaginatedUrlsResponse<ShortUrlResponse>?> GetShortUrlsPerUsersId(int id, int page, int pageSize)
     {
         if (id <= 0) return null;
 
+        var skip = (page - 1) * pageSize;
+
+        var totalItems = await _context.ShortUrls
+            .Where(i => i.UserId == id)
+            .CountAsync();
+
         var shortUrls = await _context.ShortUrls
             .Where(i => i.UserId == id)
+            .OrderByDescending(i => i.CreatedAt)
+            .Skip(skip)
+            .Take(pageSize)
             .Select(s => new ShortUrlResponse
             {
                 ShortCode = s.ShortCode,
@@ -77,8 +86,19 @@ public class ShortUrlService : IShortUrlService
                 CreatedAt = s.CreatedAt
             })
             .ToListAsync();
-            
-        return shortUrls;
+
+        var totalPages = (int)Math.Ceiling((double)totalItems / pageSize);
+
+        return new PaginatedUrlsResponse<ShortUrlResponse>
+        {
+            Items = shortUrls,
+            CurrentPage = page,
+            PageSize = pageSize,
+            TotalItems = totalItems,
+            TotalPages = totalPages,
+            HasNextPage = page < totalPages,
+            HasPreviousPage = page > 1
+        };
     }
 
     private string GenerateShortCode()
