@@ -11,6 +11,7 @@ import ShortUrlsProfile from "../LayoutComponents/ShortUrlsProfile";
 import NotFound from "../MainComponents/NotFound";
 import MainLayout from "../MainComponents/MainLayout";
 import EditUrl from "../LayoutComponents/EditUrl";
+import ProtectedRoute from "../Auth/ProtectedRoute";
 
 const rootRoute = createRootRoute({
   component: MainLayout,
@@ -20,38 +21,61 @@ const rootRoute = createRootRoute({
 const indexRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/",
-  component: LoginForm,
+  component: () => (
+    <ProtectedRoute requireAuth={false}>
+      <LoginForm />
+    </ProtectedRoute>
+  ),
 });
 
 const registerRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/register",
-  component: RegisterForm,
+  component: () => (
+    <ProtectedRoute requireAuth={false}>
+      <RegisterForm />
+    </ProtectedRoute>
+  ),
 });
 
 const dashboardRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/dashboard",
-  component: Dashboard,
+  component: () => (
+    <ProtectedRoute requireAuth={true}>
+      <Dashboard />
+    </ProtectedRoute>
+  ),
 });
 
 const profileRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/profile",
-  component: Profile,
+  component: () => (
+    <ProtectedRoute requireAuth={true}>
+      <Profile />
+    </ProtectedRoute>
+  ),
 });
 
 const editUrlRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/edit-url",
-  component: EditUrl,
+  component: () => (
+    <ProtectedRoute requireAuth={true}>
+      <EditUrl />
+    </ProtectedRoute>
+  ),
 });
-
 
 const shortUrlsRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/short-urls",
-  component: ShortUrlsProfile,
+  component: () => (
+    <ProtectedRoute requireAuth={true}>
+      <ShortUrlsProfile />
+    </ProtectedRoute>
+  ),
 });
 
 const notFoundRoute = createRoute({

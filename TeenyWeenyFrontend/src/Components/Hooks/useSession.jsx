@@ -1,13 +1,23 @@
-import { useState, useEffect } from "react";
+import {
+  useState,
+  useEffect,
+  useCallback,
+  createContext,
+  useContext,
+} from "react";
 import { AuthService } from "../Api/services";
 
-export function useSession() {
+// Create a context for authentication state
+const AuthContext = createContext();
+
+// Provider component
+export function AuthProvider({ children }) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userInfo, setUserInfo] = useState(null);
   const [loading, setLoading] = useState(true);
   const [message, setMessage] = useState("");
 
-  const checkLoginStatus = async () => {
+  const checkLoginStatus = useCallback(async () => {
     const token = localStorage.getItem("token");
     if (token) {
       try {
@@ -30,14 +40,31 @@ export function useSession() {
       setUserInfo(null);
     }
     setLoading(false);
-  };
+  }, []);
 
-  const login = async (credentials) => {
+  const login = useCallback(async (credentials) => {
     try {
       const response = await AuthService.login(credentials);
       const { token } = response.data;
       localStorage.setItem("token", token);
-      await checkLoginStatus();
+
+      // Immediately update the state to reflect login
+      setIsLoggedIn(true);
+      setLoading(false);
+
+      // Get user info from the auth check
+      try {
+        const authResponse = await AuthService.authCheck();
+        setUserInfo({
+          userId: authResponse.data.userId,
+          username: authResponse.data.username,
+          message: authResponse.data.message,
+          timestamp: authResponse.data.timestamp,
+        });
+      } catch (authError) {
+        console.error("Failed to get user info:", authError);
+      }
+
       setMessage("Login successful");
       return { success: true };
     } catch (error) {
@@ -45,20 +72,21 @@ export function useSession() {
       setMessage(errorMessage);
       return { success: false, error: errorMessage };
     }
-  };
+  }, []);
 
-  const logout = () => {
+  const logout = useCallback(() => {
     localStorage.removeItem("token");
     setIsLoggedIn(false);
     setUserInfo(null);
     setMessage("Logged out successfully");
-  };
+    setLoading(false);
+  }, []);
 
   useEffect(() => {
     checkLoginStatus();
-  }, []);
+  }, [checkLoginStatus]);
 
-  return {
+  const value = {
     isLoggedIn,
     userInfo,
     loading,
@@ -67,4 +95,14 @@ export function useSession() {
     logout,
     checkLoginStatus,
   };
+
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+}
+
+export function useSession() {
+  const context = useContext(AuthContext);
+  if (!context) {
+    throw new Error("useSession must be used within an AuthProvider");
+  }
+  return context;
 }
