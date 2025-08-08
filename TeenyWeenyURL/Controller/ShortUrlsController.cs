@@ -137,6 +137,56 @@ public class ShortUrlsController : ControllerBase
     }
 
     /// <summary>
+    /// Retrieves a specific shortened URL by ID for the authenticated user
+    /// </summary>
+    /// <param name="id">The ID of the shortened URL to retrieve</param>
+    /// <returns>The shortened URL</returns>
+    /// <response code="200">Shortened URL retrieved successfully</response>
+    /// <response code="401">User not authenticated</response>
+    /// <response code="404">Shortened URL not found</response>
+    /// <response code="500">Internal server error</response>
+    [HttpGet("{id:int}")]
+    [SwaggerOperation(
+        Summary = "Get a specific shortened URL by ID",
+        Description = "Retrieves a specific shortened URL by ID for the authenticated user",
+        OperationId = "GetShortUrlById",
+        Tags = new[] { "Short URLs" }
+    )]
+    [SwaggerResponse(200, "Shortened URL retrieved successfully", typeof(ShortUrlResponse))]
+    [SwaggerResponse(401, "User not authenticated")]
+    [SwaggerResponse(404, "Shortened URL not found")]
+    [SwaggerResponse(500, "Internal server error")]
+    public async Task<IActionResult> GetShortUrlById(int id)
+    {
+        var currentUserId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        if (string.IsNullOrEmpty(currentUserId) || !int.TryParse(currentUserId, out int userId))
+        {
+            _logger.LogWarning("Unauthorized access attempt to get short URL {Id}", id);
+            return Unauthorized();
+        }
+
+        _logger.LogInformation("Retrieving short URL {Id} for user {UserId}", id, userId);
+
+        try
+        {
+            var shortUrl = await _shortUrlService.GetShortUrlByIdAsync(id, userId);
+            if (shortUrl is null)
+            {
+                _logger.LogWarning("Short URL {Id} not found for user {UserId}", id, userId);
+                return NotFound(new { message = "Short URL not found" });
+            }
+
+            _logger.LogInformation("Retrieved short URL {Id} for user {UserId}", id, userId);
+            return Ok(shortUrl);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error retrieving short URL {Id} for user {UserId}", id, userId);
+            return StatusCode(500, new { message = "Internal server error while retrieving short URL." });
+        }
+    }
+
+    /// <summary>
     /// Deletes a specific shortened URL by ID
     /// </summary>
     /// <param name="id">The ID of the shortened URL to delete</param>

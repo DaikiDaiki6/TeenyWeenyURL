@@ -11,6 +11,13 @@ namespace TeenyWeenyURL.Model.DTO;
 public class ShortUrlResponse
 {
     /// <summary>
+    /// The unique identifier for the shortened URL
+    /// </summary>
+    /// <example>1</example>
+    [SwaggerSchema(Description = "The unique identifier for the shortened URL")]
+    public int Id { get; set; }
+    
+    /// <summary>
     /// The short code used to identify the shortened URL
     /// </summary>
     /// <example>abc123</example>

@@ -8,6 +8,7 @@ import RegisterForm from "../Auth/RegisterForm";
 import Dashboard from "../LayoutComponents/Dashboard";
 import Profile from "../LayoutComponents/Profile";
 import ShortUrlsProfile from "../LayoutComponents/ShortUrlsProfile";
+import CreateShortcode from "../LayoutComponents/CreateShortcode";
 import NotFound from "../MainComponents/NotFound";
 import MainLayout from "../MainComponents/MainLayout";
 import EditUrl from "../LayoutComponents/EditUrl";
@@ -60,7 +61,7 @@ const profileRoute = createRoute({
 
 const editUrlRoute = createRoute({
   getParentRoute: () => rootRoute,
-  path: "/edit-url",
+  path: "/edit-url/$id",
   component: () => (
     <ProtectedRoute requireAuth={true}>
       <EditUrl />
@@ -70,10 +71,20 @@ const editUrlRoute = createRoute({
 
 const shortUrlsRoute = createRoute({
   getParentRoute: () => rootRoute,
-  path: "/short-urls",
+  path: "/short-urls/$id",
   component: () => (
     <ProtectedRoute requireAuth={true}>
       <ShortUrlsProfile />
+    </ProtectedRoute>
+  ),
+});
+
+const createShortcodeRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/create",
+  component: () => (
+    <ProtectedRoute requireAuth={true}>
+      <CreateShortcode />
     </ProtectedRoute>
   ),
 });
@@ -91,6 +102,7 @@ const routeTree = rootRoute.addChildren([
   profileRoute,
   editUrlRoute,
   shortUrlsRoute,
+  createShortcodeRoute,
   notFoundRoute,
 ]);
 

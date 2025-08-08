@@ -11,4 +11,5 @@ public interface IShortUrlService
     Task<bool> EditShortUrlAsync(EditShortUrlRequest request, int id, int userId);
     Task<string?> GetOriginalUrlAsync(string shortCode);
     Task<bool> DeleteShortUrlAsync(int id, int userId);
+    Task<ShortUrlResponse?> GetShortUrlByIdAsync(int id, int userId);
 }

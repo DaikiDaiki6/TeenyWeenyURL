@@ -92,6 +92,7 @@ public class ShortUrlService : IShortUrlService
             .Take(pageSize)
             .Select(s => new ShortUrlResponse
             {
+                Id = s.Id,
                 ShortCode = s.ShortCode,
                 OriginalUrl = s.OriginalUrl,
                 Clicks = s.Clicks,
@@ -112,6 +113,24 @@ public class ShortUrlService : IShortUrlService
             HasNextPage = page < totalPages,
             HasPreviousPage = page > 1
         };
+    }
+
+    public async Task<ShortUrlResponse?> GetShortUrlByIdAsync(int id, int userId)
+    {
+        var shortUrl = await _context.ShortUrls
+            .Where(s => s.Id == id && s.UserId == userId)
+            .Select(s => new ShortUrlResponse
+            {
+                Id = s.Id,
+                ShortCode = s.ShortCode,
+                OriginalUrl = s.OriginalUrl,
+                Clicks = s.Clicks,
+                CreatedAt = s.CreatedAt,
+                Note = s.Note
+            })
+            .FirstOrDefaultAsync();
+
+        return shortUrl;
     }
 
     private string GenerateShortCode()
