@@ -34,7 +34,7 @@ public class RedirectController : ControllerBase
     /// <response code="302">Redirect to original URL</response>
     /// <response code="404">Short URL not found</response>
     /// <response code="500">Internal server error</response>
-    [HttpGet("{shortcode}")]
+    [HttpGet("{shortcode:length(6,8)}")]
     [SwaggerOperation(
         Summary = "Redirect to original URL",
         Description = "Redirects a short code to its corresponding original URL",

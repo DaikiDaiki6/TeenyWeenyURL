@@ -11,8 +11,16 @@ using Serilog.Events;
 using TeenyWeenyURL.Data;
 using TeenyWeenyURL.Model.JwtConfiguration;
 using TeenyWeenyURL.Services;
+using Microsoft.AspNetCore.StaticFiles;
 
 var builder = WebApplication.CreateBuilder(args);
+var provider = new FileExtensionContentTypeProvider();
+provider.Mappings[".svg"] = "image/svg+xml";
+provider.Mappings[".gif"] = "image/gif";
+provider.Mappings[".png"] = "image/png";
+provider.Mappings[".jpg"] = "image/jpeg";
+provider.Mappings[".jpeg"] = "image/jpeg";
+provider.Mappings[".webp"] = "image/webp";
 
 // LOGGER SETTINGS
 Log.Logger = new LoggerConfiguration()
@@ -122,13 +130,28 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>
     {
-        policy.WithOrigins("http://localhost:5173")
+        policy.AllowAnyOrigin()
         .AllowAnyHeader()
         .AllowAnyMethod();
     });
 });
 
 var app = builder.Build();
+
+// STATIC FILES RUN - Enhanced configuration
+app.UseStaticFiles(new StaticFileOptions
+{
+    ContentTypeProvider = provider,
+    OnPrepareResponse = ctx =>
+    {
+        // Set cache headers for static assets
+        const int durationInSeconds = 60 * 60 * 24 * 365; // 1 year
+        ctx.Context.Response.Headers.Append("Cache-Control", $"public,max-age={durationInSeconds}");
+    }
+});
+
+// HTTPS RUN
+app.UseHttpsRedirection();
 
 // SWAGGER RUN
 if (app.Environment.IsDevelopment())
@@ -145,17 +168,18 @@ if (app.Environment.IsDevelopment())
 // LOGGER RUN
 app.UseSerilogRequestLogging();
 
+// CORS RUN
+app.UseCors("AllowFrontend");
+
 // AUTH RUN
 app.UseAuthentication();
 app.UseAuthorization();
 
-// CORS RUN
-app.UseCors("AllowFrontend");
-
-// HTTPS RUN
-app.UseHttpsRedirection();
-
 // CONTROLLERS RUN
 app.MapControllers();
+
+// Fallback to client side if static files are not found
+app.MapFallbackToFile("index.html");
+
 app.Run();
 

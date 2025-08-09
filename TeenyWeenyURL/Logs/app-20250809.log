@@ -1,0 +1,674 @@
+2025-08-09 20:59:50.122 +08:00 [INF] User profile is available. Using 'C:\Users\jeffr\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-09 20:59:50.700 +08:00 [INF] Now listening on: http://localhost:5140
+2025-08-09 20:59:50.787 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-09 20:59:50.789 +08:00 [INF] Hosting environment: Development
+2025-08-09 20:59:50.790 +08:00 [INF] Content root path: C:\Users\jeffr\Documents\Programming\TeenyWeenyURL\TeenyWeenyURL
+2025-08-09 21:00:07.609 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/ - null null
+2025-08-09 21:00:07.703 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-08-09 21:00:07.723 +08:00 [INF] Executing endpoint 'Fallback {*path:nonfile}'
+2025-08-09 21:00:07.747 +08:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'C:\Users\jeffr\Documents\Programming\TeenyWeenyURL\TeenyWeenyURL\wwwroot\index.html'
+2025-08-09 21:00:07.749 +08:00 [INF] Executed endpoint 'Fallback {*path:nonfile}'
+2025-08-09 21:00:07.751 +08:00 [INF] HTTP GET /index.html responded 200 in 80.7685 ms
+2025-08-09 21:00:07.756 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/index.html - 200 475 text/html 149.2772ms
+2025-08-09 21:00:07.776 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/assets/index-s88cLVlo.css - null null
+2025-08-09 21:00:07.776 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/assets/index-C2cCmwQc.js - null null
+2025-08-09 21:00:07.786 +08:00 [INF] Sending file. Request path: '/assets/index-s88cLVlo.css'. Physical path: 'C:\Users\jeffr\Documents\Programming\TeenyWeenyURL\TeenyWeenyURL\wwwroot\assets\index-s88cLVlo.css'
+2025-08-09 21:00:07.792 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/assets/index-s88cLVlo.css - 200 30707 text/css 15.8137ms
+2025-08-09 21:00:07.792 +08:00 [INF] Sending file. Request path: '/assets/index-C2cCmwQc.js'. Physical path: 'C:\Users\jeffr\Documents\Programming\TeenyWeenyURL\TeenyWeenyURL\wwwroot\assets\index-C2cCmwQc.js'
+2025-08-09 21:00:07.798 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/assets/index-C2cCmwQc.js - 200 378033 text/javascript 21.7154ms
+2025-08-09 21:00:07.845 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/logo_only.svg - null null
+2025-08-09 21:00:07.848 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 21:00:07.876 +08:00 [INF] Route matched with {action = "RedirectToOriginal", controller = "Redirect"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RedirectToOriginal(System.String) on controller TeenyWeenyURL.Controller.RedirectController (TeenyWeenyURL).
+2025-08-09 21:00:08.349 +08:00 [INF] Redirect attempt for shortcode: logo_only.svg
+2025-08-09 21:00:08.351 +08:00 [WRN] Short URL not found for shortcode: logo_only.svg
+2025-08-09 21:00:08.362 +08:00 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-09 21:00:08.397 +08:00 [INF] Executed action TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL) in 515.729ms
+2025-08-09 21:00:08.400 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 21:00:08.402 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/logo_only.svg - null null
+2025-08-09 21:00:08.403 +08:00 [INF] HTTP GET /logo_only.svg responded 404 in 555.8191 ms
+2025-08-09 21:00:08.410 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 21:00:08.414 +08:00 [INF] Route matched with {action = "RedirectToOriginal", controller = "Redirect"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RedirectToOriginal(System.String) on controller TeenyWeenyURL.Controller.RedirectController (TeenyWeenyURL).
+2025-08-09 21:00:08.412 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/logo_only.svg - 404 null application/json; charset=utf-8 567.2379ms
+2025-08-09 21:00:08.423 +08:00 [INF] Redirect attempt for shortcode: logo_only.svg
+2025-08-09 21:00:08.424 +08:00 [WRN] Short URL not found for shortcode: logo_only.svg
+2025-08-09 21:00:08.426 +08:00 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-09 21:00:08.428 +08:00 [INF] Executed action TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL) in 10.999ms
+2025-08-09 21:00:08.429 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 21:00:08.430 +08:00 [INF] HTTP GET /logo_only.svg responded 404 in 23.3146 ms
+2025-08-09 21:00:08.431 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/logo_only.svg - 404 null application/json; charset=utf-8 29.0059ms
+2025-08-09 21:00:20.134 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5140/api/Auth/login - application/json 45
+2025-08-09 21:00:20.138 +08:00 [INF] CORS policy execution successful.
+2025-08-09 21:00:20.140 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.AuthController.Login (TeenyWeenyURL)'
+2025-08-09 21:00:20.147 +08:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(TeenyWeenyURL.Model.DTO.LoginUserRequest) on controller TeenyWeenyURL.Controller.AuthController (TeenyWeenyURL).
+2025-08-09 21:00:20.162 +08:00 [INF] User login attempt: Daikii
+2025-08-09 21:00:21.335 +08:00 [INF] Executed DbCommand (45ms) [Parameters=[@__request_Username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Password", u."Username"
+FROM "Users" AS u
+WHERE u."Username" = @__request_Username_0
+LIMIT 1
+2025-08-09 21:00:21.447 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5140/api/Auth/login - application/json 45
+2025-08-09 21:00:21.451 +08:00 [INF] CORS policy execution successful.
+2025-08-09 21:00:21.452 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.AuthController.Login (TeenyWeenyURL)'
+2025-08-09 21:00:21.452 +08:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(TeenyWeenyURL.Model.DTO.LoginUserRequest) on controller TeenyWeenyURL.Controller.AuthController (TeenyWeenyURL).
+2025-08-09 21:00:21.455 +08:00 [INF] User login attempt: Daikii
+2025-08-09 21:00:21.506 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Password", u."Username"
+FROM "Users" AS u
+WHERE u."Username" = @__request_Username_0
+LIMIT 1
+2025-08-09 21:00:21.708 +08:00 [WRN] Login failed - invalid credentials for user: Daikii
+2025-08-09 21:00:21.710 +08:00 [INF] Executing UnauthorizedObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-09 21:00:21.712 +08:00 [INF] Executed action TeenyWeenyURL.Controller.AuthController.Login (TeenyWeenyURL) in 1562.6885ms
+2025-08-09 21:00:21.713 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.AuthController.Login (TeenyWeenyURL)'
+2025-08-09 21:00:21.714 +08:00 [INF] HTTP POST /api/Auth/login responded 401 in 1576.9524 ms
+2025-08-09 21:00:21.721 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5140/api/Auth/login - 401 null application/json; charset=utf-8 1586.2558ms
+2025-08-09 21:00:21.815 +08:00 [WRN] Login failed - invalid credentials for user: Daikii
+2025-08-09 21:00:21.816 +08:00 [INF] Executing UnauthorizedObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-09 21:00:21.817 +08:00 [INF] Executed action TeenyWeenyURL.Controller.AuthController.Login (TeenyWeenyURL) in 363.2876ms
+2025-08-09 21:00:21.818 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.AuthController.Login (TeenyWeenyURL)'
+2025-08-09 21:00:21.819 +08:00 [INF] HTTP POST /api/Auth/login responded 401 in 368.6078 ms
+2025-08-09 21:00:21.821 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5140/api/Auth/login - 401 null application/json; charset=utf-8 373.3286ms
+2025-08-09 21:00:24.920 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5140/api/Auth/login - application/json 45
+2025-08-09 21:00:24.923 +08:00 [INF] CORS policy execution successful.
+2025-08-09 21:00:24.924 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.AuthController.Login (TeenyWeenyURL)'
+2025-08-09 21:00:24.925 +08:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(TeenyWeenyURL.Model.DTO.LoginUserRequest) on controller TeenyWeenyURL.Controller.AuthController (TeenyWeenyURL).
+2025-08-09 21:00:24.929 +08:00 [INF] User login attempt: Daikii
+2025-08-09 21:00:24.940 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Password", u."Username"
+FROM "Users" AS u
+WHERE u."Username" = @__request_Username_0
+LIMIT 1
+2025-08-09 21:00:25.241 +08:00 [INF] User logged in successfully: Daikii
+2025-08-09 21:00:25.243 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-09 21:00:25.245 +08:00 [INF] Executed action TeenyWeenyURL.Controller.AuthController.Login (TeenyWeenyURL) in 318.7652ms
+2025-08-09 21:00:25.246 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.AuthController.Login (TeenyWeenyURL)'
+2025-08-09 21:00:25.247 +08:00 [INF] HTTP POST /api/Auth/login responded 200 in 324.3514 ms
+2025-08-09 21:00:25.248 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5140/api/Auth/login - 200 null application/json; charset=utf-8 327.7527ms
+2025-08-09 21:00:25.251 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/api/Auth/check - null null
+2025-08-09 21:00:25.277 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/api/ShortUrls/all-urls?page=1&pageSize=10 - null null
+2025-08-09 21:00:25.297 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId (TeenyWeenyURL)'
+2025-08-09 21:00:25.298 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.AuthController.TestAuth (TeenyWeenyURL)'
+2025-08-09 21:00:25.300 +08:00 [INF] Route matched with {action = "TestAuth", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult TestAuth() on controller TeenyWeenyURL.Controller.AuthController (TeenyWeenyURL).
+2025-08-09 21:00:25.302 +08:00 [INF] Authentication check for user: Daikii (ID: 2)
+2025-08-09 21:00:25.302 +08:00 [INF] Route matched with {action = "GetShortUrlPerUserId", controller = "ShortUrls"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetShortUrlPerUserId(Int32, Int32) on controller TeenyWeenyURL.Controller.ShortUrlsController (TeenyWeenyURL).
+2025-08-09 21:00:25.303 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-09 21:00:25.315 +08:00 [INF] Retrieving short URLs for user 2 - Page: 1, PageSize: 10
+2025-08-09 21:00:25.316 +08:00 [INF] Executed action TeenyWeenyURL.Controller.AuthController.TestAuth (TeenyWeenyURL) in 15.4ms
+2025-08-09 21:00:25.319 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.AuthController.TestAuth (TeenyWeenyURL)'
+2025-08-09 21:00:25.319 +08:00 [INF] HTTP GET /api/Auth/check responded 200 in 66.4664 ms
+2025-08-09 21:00:25.321 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/api/Auth/check - 200 null application/json; charset=utf-8 69.2561ms
+2025-08-09 21:00:25.367 +08:00 [INF] Executed DbCommand (7ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "ShortUrls" AS s
+WHERE s."UserId" = @__id_0
+2025-08-09 21:00:25.389 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."ShortCode", s."OriginalUrl", s."Clicks", s."CreatedAt", s."Note"
+FROM "ShortUrls" AS s
+WHERE s."UserId" = @__id_0
+ORDER BY s."CreatedAt" DESC
+LIMIT @__p_2 OFFSET @__p_1
+2025-08-09 21:00:25.397 +08:00 [INF] Retrieved 1 short URLs for user 2 (Page 1 of 1)
+2025-08-09 21:00:25.398 +08:00 [INF] Executing OkObjectResult, writing value of type 'TeenyWeenyURL.Model.DTO.PaginatedUrlsResponse`1[[TeenyWeenyURL.Model.DTO.ShortUrlResponse, TeenyWeenyURL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-09 21:00:25.413 +08:00 [INF] Executed action TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId (TeenyWeenyURL) in 109.8024ms
+2025-08-09 21:00:25.415 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId (TeenyWeenyURL)'
+2025-08-09 21:00:25.415 +08:00 [INF] HTTP GET /api/ShortUrls/all-urls responded 200 in 132.4777 ms
+2025-08-09 21:00:25.417 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/api/ShortUrls/all-urls?page=1&pageSize=10 - 200 null application/json; charset=utf-8 139.3164ms
+2025-08-09 21:00:25.421 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/logo_only.svg - null null
+2025-08-09 21:00:25.424 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 21:00:25.426 +08:00 [INF] Route matched with {action = "RedirectToOriginal", controller = "Redirect"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RedirectToOriginal(System.String) on controller TeenyWeenyURL.Controller.RedirectController (TeenyWeenyURL).
+2025-08-09 21:00:25.428 +08:00 [INF] Redirect attempt for shortcode: logo_only.svg
+2025-08-09 21:00:25.429 +08:00 [WRN] Short URL not found for shortcode: logo_only.svg
+2025-08-09 21:00:25.430 +08:00 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-09 21:00:25.431 +08:00 [INF] Executed action TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL) in 3.0938ms
+2025-08-09 21:00:25.433 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 21:00:25.433 +08:00 [INF] HTTP GET /logo_only.svg responded 404 in 10.7956 ms
+2025-08-09 21:00:25.435 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/logo_only.svg - 404 null application/json; charset=utf-8 14.1546ms
+2025-08-09 21:00:31.196 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/api/Auth/check - null null
+2025-08-09 21:00:31.196 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/api/ShortUrls/all-urls?page=1&pageSize=10 - null null
+2025-08-09 21:00:31.200 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.AuthController.TestAuth (TeenyWeenyURL)'
+2025-08-09 21:00:31.201 +08:00 [INF] Route matched with {action = "TestAuth", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult TestAuth() on controller TeenyWeenyURL.Controller.AuthController (TeenyWeenyURL).
+2025-08-09 21:00:31.202 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId (TeenyWeenyURL)'
+2025-08-09 21:00:31.203 +08:00 [INF] Authentication check for user: Daikii (ID: 2)
+2025-08-09 21:00:31.203 +08:00 [INF] Route matched with {action = "GetShortUrlPerUserId", controller = "ShortUrls"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetShortUrlPerUserId(Int32, Int32) on controller TeenyWeenyURL.Controller.ShortUrlsController (TeenyWeenyURL).
+2025-08-09 21:00:31.204 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-09 21:00:31.207 +08:00 [INF] Retrieving short URLs for user 2 - Page: 1, PageSize: 10
+2025-08-09 21:00:31.208 +08:00 [INF] Executed action TeenyWeenyURL.Controller.AuthController.TestAuth (TeenyWeenyURL) in 5.0631ms
+2025-08-09 21:00:31.210 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.AuthController.TestAuth (TeenyWeenyURL)'
+2025-08-09 21:00:31.211 +08:00 [INF] HTTP GET /api/Auth/check responded 200 in 13.1255 ms
+2025-08-09 21:00:31.211 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "ShortUrls" AS s
+WHERE s."UserId" = @__id_0
+2025-08-09 21:00:31.212 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/api/Auth/check - 200 null application/json; charset=utf-8 16.6618ms
+2025-08-09 21:00:31.216 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."ShortCode", s."OriginalUrl", s."Clicks", s."CreatedAt", s."Note"
+FROM "ShortUrls" AS s
+WHERE s."UserId" = @__id_0
+ORDER BY s."CreatedAt" DESC
+LIMIT @__p_2 OFFSET @__p_1
+2025-08-09 21:00:31.218 +08:00 [INF] Retrieved 1 short URLs for user 2 (Page 1 of 1)
+2025-08-09 21:00:31.220 +08:00 [INF] Executing OkObjectResult, writing value of type 'TeenyWeenyURL.Model.DTO.PaginatedUrlsResponse`1[[TeenyWeenyURL.Model.DTO.ShortUrlResponse, TeenyWeenyURL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-09 21:00:31.221 +08:00 [INF] Executed action TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId (TeenyWeenyURL) in 15.4814ms
+2025-08-09 21:00:31.224 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId (TeenyWeenyURL)'
+2025-08-09 21:00:31.226 +08:00 [INF] HTTP GET /api/ShortUrls/all-urls responded 200 in 24.2722 ms
+2025-08-09 21:00:31.227 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/api/ShortUrls/all-urls?page=1&pageSize=10 - 200 null application/json; charset=utf-8 31.5496ms
+2025-08-09 21:00:31.231 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/logo_only.svg - null null
+2025-08-09 21:00:31.232 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 21:00:31.233 +08:00 [INF] Route matched with {action = "RedirectToOriginal", controller = "Redirect"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RedirectToOriginal(System.String) on controller TeenyWeenyURL.Controller.RedirectController (TeenyWeenyURL).
+2025-08-09 21:00:31.235 +08:00 [INF] Redirect attempt for shortcode: logo_only.svg
+2025-08-09 21:00:31.235 +08:00 [WRN] Short URL not found for shortcode: logo_only.svg
+2025-08-09 21:00:31.236 +08:00 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-09 21:00:31.237 +08:00 [INF] Executed action TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL) in 2.3025ms
+2025-08-09 21:00:31.238 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 21:00:31.239 +08:00 [INF] HTTP GET /logo_only.svg responded 404 in 7.0196 ms
+2025-08-09 21:00:31.241 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/logo_only.svg - 404 null application/json; charset=utf-8 10.2696ms
+2025-08-09 21:34:05.433 +08:00 [INF] Application is shutting down...
+2025-08-09 23:01:29.531 +08:00 [INF] User profile is available. Using 'C:\Users\jeffr\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-09 23:01:29.649 +08:00 [INF] Now listening on: http://localhost:5140
+2025-08-09 23:01:29.652 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-09 23:01:29.653 +08:00 [INF] Hosting environment: Development
+2025-08-09 23:01:29.653 +08:00 [INF] Content root path: C:\Users\jeffr\Documents\Programming\TeenyWeenyURL\TeenyWeenyURL
+2025-08-09 23:01:30.944 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/profile - null null
+2025-08-09 23:01:31.049 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-08-09 23:01:31.051 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:01:31.077 +08:00 [INF] Route matched with {action = "RedirectToOriginal", controller = "Redirect"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RedirectToOriginal(System.String) on controller TeenyWeenyURL.Controller.RedirectController (TeenyWeenyURL).
+2025-08-09 23:01:31.619 +08:00 [INF] Redirect attempt for shortcode: profile
+2025-08-09 23:01:31.621 +08:00 [WRN] Short URL not found for shortcode: profile
+2025-08-09 23:01:31.636 +08:00 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-09 23:01:31.697 +08:00 [INF] Executed action TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL) in 609.7469ms
+2025-08-09 23:01:31.716 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:01:31.719 +08:00 [INF] HTTP GET /profile responded 404 in 720.0457 ms
+2025-08-09 23:01:31.723 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/profile - 404 null application/json; charset=utf-8 780.563ms
+2025-08-09 23:01:31.767 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/favicon.ico - null null
+2025-08-09 23:01:31.770 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:01:31.771 +08:00 [INF] Route matched with {action = "RedirectToOriginal", controller = "Redirect"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RedirectToOriginal(System.String) on controller TeenyWeenyURL.Controller.RedirectController (TeenyWeenyURL).
+2025-08-09 23:01:31.779 +08:00 [INF] Redirect attempt for shortcode: favicon.ico
+2025-08-09 23:01:31.780 +08:00 [WRN] Short URL not found for shortcode: favicon.ico
+2025-08-09 23:01:31.782 +08:00 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-09 23:01:31.783 +08:00 [INF] Executed action TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL) in 9.6906ms
+2025-08-09 23:01:31.784 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:01:31.785 +08:00 [INF] HTTP GET /favicon.ico responded 404 in 15.3434 ms
+2025-08-09 23:01:31.786 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/favicon.ico - 404 null application/json; charset=utf-8 19.5912ms
+2025-08-09 23:01:33.971 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/profile - null null
+2025-08-09 23:01:33.975 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:01:33.976 +08:00 [INF] Route matched with {action = "RedirectToOriginal", controller = "Redirect"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RedirectToOriginal(System.String) on controller TeenyWeenyURL.Controller.RedirectController (TeenyWeenyURL).
+2025-08-09 23:01:33.981 +08:00 [INF] Redirect attempt for shortcode: profile
+2025-08-09 23:01:33.982 +08:00 [WRN] Short URL not found for shortcode: profile
+2025-08-09 23:01:33.983 +08:00 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-09 23:01:33.984 +08:00 [INF] Executed action TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL) in 6.3559ms
+2025-08-09 23:01:33.985 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:01:33.986 +08:00 [INF] HTTP GET /profile responded 404 in 12.0602 ms
+2025-08-09 23:01:33.988 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/profile - 404 null application/json; charset=utf-8 16.6483ms
+2025-08-09 23:01:34.939 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/profile - null null
+2025-08-09 23:01:34.941 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:01:34.942 +08:00 [INF] Route matched with {action = "RedirectToOriginal", controller = "Redirect"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RedirectToOriginal(System.String) on controller TeenyWeenyURL.Controller.RedirectController (TeenyWeenyURL).
+2025-08-09 23:01:34.943 +08:00 [INF] Redirect attempt for shortcode: profile
+2025-08-09 23:01:34.944 +08:00 [WRN] Short URL not found for shortcode: profile
+2025-08-09 23:01:34.945 +08:00 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-09 23:01:34.946 +08:00 [INF] Executed action TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL) in 2.8019ms
+2025-08-09 23:01:34.947 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:01:34.948 +08:00 [INF] HTTP GET /profile responded 404 in 7.2999 ms
+2025-08-09 23:01:34.950 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/profile - 404 null application/json; charset=utf-8 10.8757ms
+2025-08-09 23:01:35.611 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/profile - null null
+2025-08-09 23:01:35.613 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:01:35.614 +08:00 [INF] Route matched with {action = "RedirectToOriginal", controller = "Redirect"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RedirectToOriginal(System.String) on controller TeenyWeenyURL.Controller.RedirectController (TeenyWeenyURL).
+2025-08-09 23:01:35.615 +08:00 [INF] Redirect attempt for shortcode: profile
+2025-08-09 23:01:35.616 +08:00 [WRN] Short URL not found for shortcode: profile
+2025-08-09 23:01:35.616 +08:00 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-09 23:01:35.618 +08:00 [INF] Executed action TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL) in 2.5356ms
+2025-08-09 23:01:35.619 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:01:35.619 +08:00 [INF] HTTP GET /profile responded 404 in 6.7087 ms
+2025-08-09 23:01:35.622 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/profile - 404 null application/json; charset=utf-8 10.7778ms
+2025-08-09 23:01:37.802 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/ - null null
+2025-08-09 23:01:37.817 +08:00 [INF] Executing endpoint 'Fallback {*path:nonfile}'
+2025-08-09 23:01:37.831 +08:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'C:\Users\jeffr\Documents\Programming\TeenyWeenyURL\TeenyWeenyURL\wwwroot\index.html'
+2025-08-09 23:01:37.832 +08:00 [INF] Executed endpoint 'Fallback {*path:nonfile}'
+2025-08-09 23:01:37.833 +08:00 [INF] HTTP GET /index.html responded 200 in 15.3689 ms
+2025-08-09 23:01:37.835 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/index.html - 200 475 text/html 33.586ms
+2025-08-09 23:01:37.849 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/assets/index-C2cCmwQc.js - null null
+2025-08-09 23:01:37.851 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/assets/index-s88cLVlo.css - null null
+2025-08-09 23:01:37.856 +08:00 [INF] Sending file. Request path: '/assets/index-s88cLVlo.css'. Physical path: 'C:\Users\jeffr\Documents\Programming\TeenyWeenyURL\TeenyWeenyURL\wwwroot\assets\index-s88cLVlo.css'
+2025-08-09 23:01:37.860 +08:00 [INF] Sending file. Request path: '/assets/index-C2cCmwQc.js'. Physical path: 'C:\Users\jeffr\Documents\Programming\TeenyWeenyURL\TeenyWeenyURL\wwwroot\assets\index-C2cCmwQc.js'
+2025-08-09 23:01:37.861 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/assets/index-s88cLVlo.css - 200 30707 text/css 10.1235ms
+2025-08-09 23:01:37.863 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/assets/index-C2cCmwQc.js - 200 378033 text/javascript 13.5509ms
+2025-08-09 23:01:37.902 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/api/Auth/check - null null
+2025-08-09 23:01:37.909 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/logo_only.svg - null null
+2025-08-09 23:01:37.912 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:01:37.914 +08:00 [INF] Route matched with {action = "RedirectToOriginal", controller = "Redirect"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RedirectToOriginal(System.String) on controller TeenyWeenyURL.Controller.RedirectController (TeenyWeenyURL).
+2025-08-09 23:01:37.920 +08:00 [INF] Redirect attempt for shortcode: logo_only.svg
+2025-08-09 23:01:37.921 +08:00 [WRN] Short URL not found for shortcode: logo_only.svg
+2025-08-09 23:01:37.922 +08:00 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-09 23:01:37.923 +08:00 [INF] Executed action TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL) in 3.9549ms
+2025-08-09 23:01:37.926 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:01:37.926 +08:00 [INF] HTTP GET /logo_only.svg responded 404 in 14.2369 ms
+2025-08-09 23:01:37.928 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/logo_only.svg - 404 null application/json; charset=utf-8 18.9388ms
+2025-08-09 23:01:37.940 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/logo_only.svg - null null
+2025-08-09 23:01:37.943 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:01:37.944 +08:00 [INF] Route matched with {action = "RedirectToOriginal", controller = "Redirect"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RedirectToOriginal(System.String) on controller TeenyWeenyURL.Controller.RedirectController (TeenyWeenyURL).
+2025-08-09 23:01:37.946 +08:00 [INF] Redirect attempt for shortcode: logo_only.svg
+2025-08-09 23:01:37.947 +08:00 [WRN] Short URL not found for shortcode: logo_only.svg
+2025-08-09 23:01:37.948 +08:00 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-09 23:01:37.949 +08:00 [INF] Executed action TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL) in 3.711ms
+2025-08-09 23:01:37.952 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:01:37.953 +08:00 [INF] HTTP GET /logo_only.svg responded 404 in 9.9604 ms
+2025-08-09 23:01:37.954 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/logo_only.svg - 404 null application/json; charset=utf-8 14.1022ms
+2025-08-09 23:01:37.977 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/9/2025 2:00:25 PM', Current time (UTC): '8/9/2025 3:01:37 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-09 23:01:37.996 +08:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/9/2025 2:00:25 PM', Current time (UTC): '8/9/2025 3:01:37 PM'.
+2025-08-09 23:01:38.003 +08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-08-09 23:01:38.009 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-09 23:01:38.010 +08:00 [INF] HTTP GET /api/Auth/check responded 401 in 101.1369 ms
+2025-08-09 23:01:38.011 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/api/Auth/check - 401 0 null 108.8268ms
+2025-08-09 23:01:46.693 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5140/api/Auth/login - application/json 45
+2025-08-09 23:01:46.696 +08:00 [INF] CORS policy execution successful.
+2025-08-09 23:01:46.697 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.AuthController.Login (TeenyWeenyURL)'
+2025-08-09 23:01:46.702 +08:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(TeenyWeenyURL.Model.DTO.LoginUserRequest) on controller TeenyWeenyURL.Controller.AuthController (TeenyWeenyURL).
+2025-08-09 23:01:46.715 +08:00 [INF] User login attempt: Daikii
+2025-08-09 23:01:47.834 +08:00 [INF] Executed DbCommand (41ms) [Parameters=[@__request_Username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Password", u."Username"
+FROM "Users" AS u
+WHERE u."Username" = @__request_Username_0
+LIMIT 1
+2025-08-09 23:01:48.189 +08:00 [INF] User logged in successfully: Daikii
+2025-08-09 23:01:48.191 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-09 23:01:48.194 +08:00 [INF] Executed action TeenyWeenyURL.Controller.AuthController.Login (TeenyWeenyURL) in 1490.5312ms
+2025-08-09 23:01:48.196 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.AuthController.Login (TeenyWeenyURL)'
+2025-08-09 23:01:48.198 +08:00 [INF] HTTP POST /api/Auth/login responded 200 in 1502.1970 ms
+2025-08-09 23:01:48.204 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5140/api/Auth/login - 200 null application/json; charset=utf-8 1510.7325ms
+2025-08-09 23:01:48.208 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/api/Auth/check - null null
+2025-08-09 23:01:48.219 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.AuthController.TestAuth (TeenyWeenyURL)'
+2025-08-09 23:01:48.221 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/api/ShortUrls/all-urls?page=1&pageSize=10 - null null
+2025-08-09 23:01:48.221 +08:00 [INF] Route matched with {action = "TestAuth", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult TestAuth() on controller TeenyWeenyURL.Controller.AuthController (TeenyWeenyURL).
+2025-08-09 23:01:48.225 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId (TeenyWeenyURL)'
+2025-08-09 23:01:48.225 +08:00 [INF] Authentication check for user: Daikii (ID: 2)
+2025-08-09 23:01:48.227 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-09 23:01:48.229 +08:00 [INF] Route matched with {action = "GetShortUrlPerUserId", controller = "ShortUrls"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetShortUrlPerUserId(Int32, Int32) on controller TeenyWeenyURL.Controller.ShortUrlsController (TeenyWeenyURL).
+2025-08-09 23:01:48.234 +08:00 [INF] Executed action TeenyWeenyURL.Controller.AuthController.TestAuth (TeenyWeenyURL) in 9.8472ms
+2025-08-09 23:01:48.236 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.AuthController.TestAuth (TeenyWeenyURL)'
+2025-08-09 23:01:48.237 +08:00 [INF] HTTP GET /api/Auth/check responded 200 in 26.5379 ms
+2025-08-09 23:01:48.239 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/api/Auth/check - 200 null application/json; charset=utf-8 31.9013ms
+2025-08-09 23:01:48.242 +08:00 [INF] Retrieving short URLs for user 2 - Page: 1, PageSize: 10
+2025-08-09 23:01:48.319 +08:00 [INF] Executed DbCommand (9ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "ShortUrls" AS s
+WHERE s."UserId" = @__id_0
+2025-08-09 23:01:48.337 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."ShortCode", s."OriginalUrl", s."Clicks", s."CreatedAt", s."Note"
+FROM "ShortUrls" AS s
+WHERE s."UserId" = @__id_0
+ORDER BY s."CreatedAt" DESC
+LIMIT @__p_2 OFFSET @__p_1
+2025-08-09 23:01:48.340 +08:00 [INF] Retrieved 1 short URLs for user 2 (Page 1 of 1)
+2025-08-09 23:01:48.341 +08:00 [INF] Executing OkObjectResult, writing value of type 'TeenyWeenyURL.Model.DTO.PaginatedUrlsResponse`1[[TeenyWeenyURL.Model.DTO.ShortUrlResponse, TeenyWeenyURL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-09 23:01:48.353 +08:00 [INF] Executed action TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId (TeenyWeenyURL) in 119.4932ms
+2025-08-09 23:01:48.354 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId (TeenyWeenyURL)'
+2025-08-09 23:01:48.355 +08:00 [INF] HTTP GET /api/ShortUrls/all-urls responded 200 in 131.3191 ms
+2025-08-09 23:01:48.356 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/api/ShortUrls/all-urls?page=1&pageSize=10 - 200 null application/json; charset=utf-8 135.0084ms
+2025-08-09 23:01:48.360 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/logo_only.svg - null null
+2025-08-09 23:01:48.362 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:01:48.363 +08:00 [INF] Route matched with {action = "RedirectToOriginal", controller = "Redirect"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RedirectToOriginal(System.String) on controller TeenyWeenyURL.Controller.RedirectController (TeenyWeenyURL).
+2025-08-09 23:01:48.364 +08:00 [INF] Redirect attempt for shortcode: logo_only.svg
+2025-08-09 23:01:48.365 +08:00 [WRN] Short URL not found for shortcode: logo_only.svg
+2025-08-09 23:01:48.366 +08:00 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-09 23:01:48.367 +08:00 [INF] Executed action TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL) in 2.5883ms
+2025-08-09 23:01:48.368 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:01:48.369 +08:00 [INF] HTTP GET /logo_only.svg responded 404 in 6.7372 ms
+2025-08-09 23:01:48.370 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/logo_only.svg - 404 null application/json; charset=utf-8 9.6335ms
+2025-08-09 23:03:05.591 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/api/Auth/check - null null
+2025-08-09 23:03:05.596 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.AuthController.TestAuth (TeenyWeenyURL)'
+2025-08-09 23:03:05.598 +08:00 [INF] Route matched with {action = "TestAuth", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult TestAuth() on controller TeenyWeenyURL.Controller.AuthController (TeenyWeenyURL).
+2025-08-09 23:03:05.604 +08:00 [INF] Authentication check for user: Daikii (ID: 2)
+2025-08-09 23:03:05.606 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-09 23:03:05.610 +08:00 [INF] Executed action TeenyWeenyURL.Controller.AuthController.TestAuth (TeenyWeenyURL) in 7.7296ms
+2025-08-09 23:03:05.612 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.AuthController.TestAuth (TeenyWeenyURL)'
+2025-08-09 23:03:05.613 +08:00 [INF] HTTP GET /api/Auth/check responded 200 in 18.8510 ms
+2025-08-09 23:03:05.616 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/api/Auth/check - 200 null application/json; charset=utf-8 24.323ms
+2025-08-09 23:03:05.622 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/logo_only.svg - null null
+2025-08-09 23:03:05.624 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:03:05.625 +08:00 [INF] Route matched with {action = "RedirectToOriginal", controller = "Redirect"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RedirectToOriginal(System.String) on controller TeenyWeenyURL.Controller.RedirectController (TeenyWeenyURL).
+2025-08-09 23:03:05.627 +08:00 [INF] Redirect attempt for shortcode: logo_only.svg
+2025-08-09 23:03:05.628 +08:00 [WRN] Short URL not found for shortcode: logo_only.svg
+2025-08-09 23:03:05.629 +08:00 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-09 23:03:05.630 +08:00 [INF] Executed action TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL) in 3.2656ms
+2025-08-09 23:03:05.631 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:03:05.636 +08:00 [INF] HTTP GET /logo_only.svg responded 404 in 11.4079 ms
+2025-08-09 23:03:05.637 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/logo_only.svg - 404 null application/json; charset=utf-8 14.8937ms
+2025-08-09 23:03:07.227 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/api/ShortUrls/all-urls?page=1&pageSize=10 - null null
+2025-08-09 23:03:07.230 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId (TeenyWeenyURL)'
+2025-08-09 23:03:07.232 +08:00 [INF] Route matched with {action = "GetShortUrlPerUserId", controller = "ShortUrls"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetShortUrlPerUserId(Int32, Int32) on controller TeenyWeenyURL.Controller.ShortUrlsController (TeenyWeenyURL).
+2025-08-09 23:03:07.235 +08:00 [INF] Retrieving short URLs for user 2 - Page: 1, PageSize: 10
+2025-08-09 23:03:07.249 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "ShortUrls" AS s
+WHERE s."UserId" = @__id_0
+2025-08-09 23:03:07.256 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."ShortCode", s."OriginalUrl", s."Clicks", s."CreatedAt", s."Note"
+FROM "ShortUrls" AS s
+WHERE s."UserId" = @__id_0
+ORDER BY s."CreatedAt" DESC
+LIMIT @__p_2 OFFSET @__p_1
+2025-08-09 23:03:07.257 +08:00 [INF] Retrieved 1 short URLs for user 2 (Page 1 of 1)
+2025-08-09 23:03:07.259 +08:00 [INF] Executing OkObjectResult, writing value of type 'TeenyWeenyURL.Model.DTO.PaginatedUrlsResponse`1[[TeenyWeenyURL.Model.DTO.ShortUrlResponse, TeenyWeenyURL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-09 23:03:07.260 +08:00 [INF] Executed action TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId (TeenyWeenyURL) in 25.2798ms
+2025-08-09 23:03:07.261 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId (TeenyWeenyURL)'
+2025-08-09 23:03:07.262 +08:00 [INF] HTTP GET /api/ShortUrls/all-urls responded 200 in 32.3864 ms
+2025-08-09 23:03:07.264 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/api/ShortUrls/all-urls?page=1&pageSize=10 - 200 null application/json; charset=utf-8 36.8605ms
+2025-08-09 23:03:07.275 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/logo_only.svg - null null
+2025-08-09 23:03:07.277 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:03:07.279 +08:00 [INF] Route matched with {action = "RedirectToOriginal", controller = "Redirect"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RedirectToOriginal(System.String) on controller TeenyWeenyURL.Controller.RedirectController (TeenyWeenyURL).
+2025-08-09 23:03:07.282 +08:00 [INF] Redirect attempt for shortcode: logo_only.svg
+2025-08-09 23:03:07.284 +08:00 [WRN] Short URL not found for shortcode: logo_only.svg
+2025-08-09 23:03:07.313 +08:00 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-09 23:03:07.314 +08:00 [INF] Executed action TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL) in 34.0352ms
+2025-08-09 23:03:07.317 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:03:07.318 +08:00 [INF] HTTP GET /logo_only.svg responded 404 in 40.6994 ms
+2025-08-09 23:03:07.319 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/logo_only.svg - 404 null application/json; charset=utf-8 44.4737ms
+2025-08-09 23:03:08.145 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/api/Auth/check - null null
+2025-08-09 23:03:08.150 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.AuthController.TestAuth (TeenyWeenyURL)'
+2025-08-09 23:03:08.153 +08:00 [INF] Route matched with {action = "TestAuth", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult TestAuth() on controller TeenyWeenyURL.Controller.AuthController (TeenyWeenyURL).
+2025-08-09 23:03:08.154 +08:00 [INF] Authentication check for user: Daikii (ID: 2)
+2025-08-09 23:03:08.155 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-09 23:03:08.156 +08:00 [INF] Executed action TeenyWeenyURL.Controller.AuthController.TestAuth (TeenyWeenyURL) in 2.4067ms
+2025-08-09 23:03:08.158 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.AuthController.TestAuth (TeenyWeenyURL)'
+2025-08-09 23:03:08.159 +08:00 [INF] HTTP GET /api/Auth/check responded 200 in 11.2171 ms
+2025-08-09 23:03:08.160 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/api/Auth/check - 200 null application/json; charset=utf-8 14.7203ms
+2025-08-09 23:03:08.163 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/logo_only.svg - null null
+2025-08-09 23:03:08.167 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:03:08.168 +08:00 [INF] Route matched with {action = "RedirectToOriginal", controller = "Redirect"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RedirectToOriginal(System.String) on controller TeenyWeenyURL.Controller.RedirectController (TeenyWeenyURL).
+2025-08-09 23:03:08.170 +08:00 [INF] Redirect attempt for shortcode: logo_only.svg
+2025-08-09 23:03:08.171 +08:00 [WRN] Short URL not found for shortcode: logo_only.svg
+2025-08-09 23:03:08.172 +08:00 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-09 23:03:08.175 +08:00 [INF] Executed action TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL) in 5.5866ms
+2025-08-09 23:03:08.177 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:03:08.178 +08:00 [INF] HTTP GET /logo_only.svg responded 404 in 11.4434 ms
+2025-08-09 23:03:08.180 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/logo_only.svg - 404 null application/json; charset=utf-8 16.8849ms
+2025-08-09 23:03:12.291 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5140/api/ShortUrls/create-twurl - application/json 89
+2025-08-09 23:03:12.294 +08:00 [INF] CORS policy execution successful.
+2025-08-09 23:03:12.294 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.ShortUrlsController.CreateShortUrl (TeenyWeenyURL)'
+2025-08-09 23:03:12.312 +08:00 [INF] Route matched with {action = "CreateShortUrl", controller = "ShortUrls"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateShortUrl(TeenyWeenyURL.Model.DTO.CreateShortUrlRequest) on controller TeenyWeenyURL.Controller.ShortUrlsController (TeenyWeenyURL).
+2025-08-09 23:03:12.323 +08:00 [INF] Creating short URL for user 2 with original URL: https://www.youtube.com/watch?v=4h0z3FOmRh0
+2025-08-09 23:03:12.430 +08:00 [INF] Executed DbCommand (17ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?', @p3='?', @p4='?', @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "ShortUrls" ("Clicks", "CreatedAt", "Note", "OriginalUrl", "ShortCode", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "Id";
+2025-08-09 23:03:12.448 +08:00 [INF] Short URL created successfully for user 2 with code: 11adbc
+2025-08-09 23:03:12.450 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-09 23:03:12.452 +08:00 [INF] Executed action TeenyWeenyURL.Controller.ShortUrlsController.CreateShortUrl (TeenyWeenyURL) in 137.9985ms
+2025-08-09 23:03:12.453 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.ShortUrlsController.CreateShortUrl (TeenyWeenyURL)'
+2025-08-09 23:03:12.454 +08:00 [INF] HTTP POST /api/ShortUrls/create-twurl responded 200 in 161.0477 ms
+2025-08-09 23:03:12.456 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5140/api/ShortUrls/create-twurl - 200 null application/json; charset=utf-8 164.7076ms
+2025-08-09 23:03:15.435 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/api/ShortUrls/all-urls?page=1&pageSize=10 - null null
+2025-08-09 23:03:15.438 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId (TeenyWeenyURL)'
+2025-08-09 23:03:15.439 +08:00 [INF] Route matched with {action = "GetShortUrlPerUserId", controller = "ShortUrls"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetShortUrlPerUserId(Int32, Int32) on controller TeenyWeenyURL.Controller.ShortUrlsController (TeenyWeenyURL).
+2025-08-09 23:03:15.442 +08:00 [INF] Retrieving short URLs for user 2 - Page: 1, PageSize: 10
+2025-08-09 23:03:15.445 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "ShortUrls" AS s
+WHERE s."UserId" = @__id_0
+2025-08-09 23:03:15.451 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."ShortCode", s."OriginalUrl", s."Clicks", s."CreatedAt", s."Note"
+FROM "ShortUrls" AS s
+WHERE s."UserId" = @__id_0
+ORDER BY s."CreatedAt" DESC
+LIMIT @__p_2 OFFSET @__p_1
+2025-08-09 23:03:15.455 +08:00 [INF] Retrieved 2 short URLs for user 2 (Page 1 of 1)
+2025-08-09 23:03:15.457 +08:00 [INF] Executing OkObjectResult, writing value of type 'TeenyWeenyURL.Model.DTO.PaginatedUrlsResponse`1[[TeenyWeenyURL.Model.DTO.ShortUrlResponse, TeenyWeenyURL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-09 23:03:15.458 +08:00 [INF] Executed action TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId (TeenyWeenyURL) in 16.0131ms
+2025-08-09 23:03:15.460 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId (TeenyWeenyURL)'
+2025-08-09 23:03:15.460 +08:00 [INF] HTTP GET /api/ShortUrls/all-urls responded 200 in 23.0672 ms
+2025-08-09 23:03:15.462 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/api/ShortUrls/all-urls?page=1&pageSize=10 - 200 null application/json; charset=utf-8 26.8385ms
+2025-08-09 23:03:15.467 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/logo_only.svg - null null
+2025-08-09 23:03:15.470 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:03:15.471 +08:00 [INF] Route matched with {action = "RedirectToOriginal", controller = "Redirect"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RedirectToOriginal(System.String) on controller TeenyWeenyURL.Controller.RedirectController (TeenyWeenyURL).
+2025-08-09 23:03:15.473 +08:00 [INF] Redirect attempt for shortcode: logo_only.svg
+2025-08-09 23:03:15.474 +08:00 [WRN] Short URL not found for shortcode: logo_only.svg
+2025-08-09 23:03:15.475 +08:00 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-09 23:03:15.476 +08:00 [INF] Executed action TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL) in 3.3348ms
+2025-08-09 23:03:15.478 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:03:15.481 +08:00 [INF] HTTP GET /logo_only.svg responded 404 in 11.6605 ms
+2025-08-09 23:03:15.483 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/logo_only.svg - 404 null application/json; charset=utf-8 15.2768ms
+2025-08-09 23:03:25.763 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/api/Auth/check - null null
+2025-08-09 23:03:25.763 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/api/ShortUrls/all-urls?page=1&pageSize=10 - null null
+2025-08-09 23:03:25.767 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.AuthController.TestAuth (TeenyWeenyURL)'
+2025-08-09 23:03:25.768 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId (TeenyWeenyURL)'
+2025-08-09 23:03:25.770 +08:00 [INF] Route matched with {action = "TestAuth", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult TestAuth() on controller TeenyWeenyURL.Controller.AuthController (TeenyWeenyURL).
+2025-08-09 23:03:25.770 +08:00 [INF] Route matched with {action = "GetShortUrlPerUserId", controller = "ShortUrls"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetShortUrlPerUserId(Int32, Int32) on controller TeenyWeenyURL.Controller.ShortUrlsController (TeenyWeenyURL).
+2025-08-09 23:03:25.772 +08:00 [INF] Authentication check for user: Daikii (ID: 2)
+2025-08-09 23:03:25.774 +08:00 [INF] Retrieving short URLs for user 2 - Page: 1, PageSize: 10
+2025-08-09 23:03:25.775 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-09 23:03:25.777 +08:00 [INF] Executed action TeenyWeenyURL.Controller.AuthController.TestAuth (TeenyWeenyURL) in 5.197ms
+2025-08-09 23:03:25.777 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "ShortUrls" AS s
+WHERE s."UserId" = @__id_0
+2025-08-09 23:03:25.778 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.AuthController.TestAuth (TeenyWeenyURL)'
+2025-08-09 23:03:25.782 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."ShortCode", s."OriginalUrl", s."Clicks", s."CreatedAt", s."Note"
+FROM "ShortUrls" AS s
+WHERE s."UserId" = @__id_0
+ORDER BY s."CreatedAt" DESC
+LIMIT @__p_2 OFFSET @__p_1
+2025-08-09 23:03:25.782 +08:00 [INF] HTTP GET /api/Auth/check responded 200 in 16.0271 ms
+2025-08-09 23:03:25.784 +08:00 [INF] Retrieved 2 short URLs for user 2 (Page 1 of 1)
+2025-08-09 23:03:25.784 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/api/Auth/check - 200 null application/json; charset=utf-8 21.826ms
+2025-08-09 23:03:25.785 +08:00 [INF] Executing OkObjectResult, writing value of type 'TeenyWeenyURL.Model.DTO.PaginatedUrlsResponse`1[[TeenyWeenyURL.Model.DTO.ShortUrlResponse, TeenyWeenyURL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-09 23:03:25.789 +08:00 [INF] Executed action TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId (TeenyWeenyURL) in 15.0168ms
+2025-08-09 23:03:25.790 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId (TeenyWeenyURL)'
+2025-08-09 23:03:25.791 +08:00 [INF] HTTP GET /api/ShortUrls/all-urls responded 200 in 22.7421 ms
+2025-08-09 23:03:25.793 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/api/ShortUrls/all-urls?page=1&pageSize=10 - 200 null application/json; charset=utf-8 30.002ms
+2025-08-09 23:03:25.797 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/logo_only.svg - null null
+2025-08-09 23:03:25.799 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:03:25.801 +08:00 [INF] Route matched with {action = "RedirectToOriginal", controller = "Redirect"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RedirectToOriginal(System.String) on controller TeenyWeenyURL.Controller.RedirectController (TeenyWeenyURL).
+2025-08-09 23:03:25.803 +08:00 [INF] Redirect attempt for shortcode: logo_only.svg
+2025-08-09 23:03:25.804 +08:00 [WRN] Short URL not found for shortcode: logo_only.svg
+2025-08-09 23:03:25.805 +08:00 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-09 23:03:25.806 +08:00 [INF] Executed action TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL) in 3.0296ms
+2025-08-09 23:03:25.808 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:03:25.809 +08:00 [INF] HTTP GET /logo_only.svg responded 404 in 10.3501 ms
+2025-08-09 23:03:25.811 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/logo_only.svg - 404 null application/json; charset=utf-8 14.6961ms
+2025-08-09 23:03:30.209 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/api/ShortUrls/all-urls?page=1&pageSize=10 - null null
+2025-08-09 23:03:30.212 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId (TeenyWeenyURL)'
+2025-08-09 23:03:30.214 +08:00 [INF] Route matched with {action = "GetShortUrlPerUserId", controller = "ShortUrls"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetShortUrlPerUserId(Int32, Int32) on controller TeenyWeenyURL.Controller.ShortUrlsController (TeenyWeenyURL).
+2025-08-09 23:03:30.216 +08:00 [INF] Retrieving short URLs for user 2 - Page: 1, PageSize: 10
+2025-08-09 23:03:30.218 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "ShortUrls" AS s
+WHERE s."UserId" = @__id_0
+2025-08-09 23:03:30.220 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."ShortCode", s."OriginalUrl", s."Clicks", s."CreatedAt", s."Note"
+FROM "ShortUrls" AS s
+WHERE s."UserId" = @__id_0
+ORDER BY s."CreatedAt" DESC
+LIMIT @__p_2 OFFSET @__p_1
+2025-08-09 23:03:30.222 +08:00 [INF] Retrieved 2 short URLs for user 2 (Page 1 of 1)
+2025-08-09 23:03:30.224 +08:00 [INF] Executing OkObjectResult, writing value of type 'TeenyWeenyURL.Model.DTO.PaginatedUrlsResponse`1[[TeenyWeenyURL.Model.DTO.ShortUrlResponse, TeenyWeenyURL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-09 23:03:30.225 +08:00 [INF] Executed action TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId (TeenyWeenyURL) in 9.4102ms
+2025-08-09 23:03:30.226 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId (TeenyWeenyURL)'
+2025-08-09 23:03:30.227 +08:00 [INF] HTTP GET /api/ShortUrls/all-urls responded 200 in 15.7574 ms
+2025-08-09 23:03:30.228 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/api/ShortUrls/all-urls?page=1&pageSize=10 - 200 null application/json; charset=utf-8 18.8437ms
+2025-08-09 23:03:30.233 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/logo_only.svg - null null
+2025-08-09 23:03:30.235 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:03:30.236 +08:00 [INF] Route matched with {action = "RedirectToOriginal", controller = "Redirect"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RedirectToOriginal(System.String) on controller TeenyWeenyURL.Controller.RedirectController (TeenyWeenyURL).
+2025-08-09 23:03:30.238 +08:00 [INF] Redirect attempt for shortcode: logo_only.svg
+2025-08-09 23:03:30.239 +08:00 [WRN] Short URL not found for shortcode: logo_only.svg
+2025-08-09 23:03:30.239 +08:00 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-09 23:03:30.241 +08:00 [INF] Executed action TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL) in 3.0422ms
+2025-08-09 23:03:30.242 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:03:30.243 +08:00 [INF] HTTP GET /logo_only.svg responded 404 in 7.4787 ms
+2025-08-09 23:03:30.244 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/logo_only.svg - 404 null application/json; charset=utf-8 10.6124ms
+2025-08-09 23:03:34.769 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/11adbc - null null
+2025-08-09 23:03:34.772 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:03:34.773 +08:00 [INF] Route matched with {action = "RedirectToOriginal", controller = "Redirect"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RedirectToOriginal(System.String) on controller TeenyWeenyURL.Controller.RedirectController (TeenyWeenyURL).
+2025-08-09 23:03:34.778 +08:00 [INF] Redirect attempt for shortcode: 11adbc
+2025-08-09 23:03:34.792 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__shortCode_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."Clicks", s."CreatedAt", s."Note", s."OriginalUrl", s."ShortCode", s."UserId"
+FROM "ShortUrls" AS s
+WHERE s."ShortCode" = @__shortCode_0
+LIMIT 1
+2025-08-09 23:03:34.804 +08:00 [INF] Executed DbCommand (6ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "ShortUrls" SET "Clicks" = @p0
+WHERE "Id" = @p1;
+2025-08-09 23:03:34.807 +08:00 [INF] Redirecting shortcode 11adbc to: https://www.youtube.com/watch?v=4h0z3FOmRh0
+2025-08-09 23:03:34.809 +08:00 [INF] Executing RedirectResult, redirecting to https://www.youtube.com/watch?v=4h0z3FOmRh0.
+2025-08-09 23:03:34.810 +08:00 [INF] Executed action TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL) in 31.6376ms
+2025-08-09 23:03:34.811 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:03:34.812 +08:00 [INF] HTTP GET /11adbc responded 302 in 40.2128 ms
+2025-08-09 23:03:34.813 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/11adbc - 302 0 null 43.787ms
+2025-08-09 23:03:50.042 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/logo_only.svg - null null
+2025-08-09 23:03:50.045 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:03:50.051 +08:00 [INF] Route matched with {action = "RedirectToOriginal", controller = "Redirect"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RedirectToOriginal(System.String) on controller TeenyWeenyURL.Controller.RedirectController (TeenyWeenyURL).
+2025-08-09 23:03:50.053 +08:00 [INF] Redirect attempt for shortcode: logo_only.svg
+2025-08-09 23:03:50.054 +08:00 [WRN] Short URL not found for shortcode: logo_only.svg
+2025-08-09 23:03:50.055 +08:00 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-09 23:03:50.056 +08:00 [INF] Executed action TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL) in 3.189ms
+2025-08-09 23:03:50.060 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:03:50.061 +08:00 [INF] HTTP GET /logo_only.svg responded 404 in 16.5438 ms
+2025-08-09 23:03:50.088 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/logo_only.svg - 404 null application/json; charset=utf-8 45.7263ms
+2025-08-09 23:04:04.969 +08:00 [INF] Request starting HTTP/1.1 HEAD http://localhost:5140/logo_only.svg - null null
+2025-08-09 23:04:04.971 +08:00 [INF] Request finished HTTP/1.1 HEAD http://localhost:5140/logo_only.svg - 200 299704 image/svg+xml 2.0747ms
+2025-08-09 23:04:13.034 +08:00 [INF] Request starting HTTP/1.1 HEAD http://localhost:5140/idk.gif - null null
+2025-08-09 23:04:13.036 +08:00 [INF] Request finished HTTP/1.1 HEAD http://localhost:5140/idk.gif - 200 167689 image/gif 2.1479ms
+2025-08-09 23:10:25.101 +08:00 [INF] User profile is available. Using 'C:\Users\jeffr\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-09 23:10:25.216 +08:00 [INF] Now listening on: http://localhost:5140
+2025-08-09 23:10:25.220 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-09 23:10:25.221 +08:00 [INF] Hosting environment: Development
+2025-08-09 23:10:25.221 +08:00 [INF] Content root path: C:\Users\jeffr\Documents\Programming\TeenyWeenyURL\TeenyWeenyURL
+2025-08-09 23:10:58.899 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/dashboard - null null
+2025-08-09 23:10:58.920 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-08-09 23:10:58.962 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:10:58.982 +08:00 [INF] Route matched with {action = "RedirectToOriginal", controller = "Redirect"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RedirectToOriginal(System.String) on controller TeenyWeenyURL.Controller.RedirectController (TeenyWeenyURL).
+2025-08-09 23:10:59.392 +08:00 [INF] Redirect attempt for shortcode: dashboard
+2025-08-09 23:10:59.394 +08:00 [WRN] Short URL not found for shortcode: dashboard
+2025-08-09 23:10:59.407 +08:00 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-09 23:10:59.448 +08:00 [INF] Executed action TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL) in 460.1369ms
+2025-08-09 23:10:59.452 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:10:59.455 +08:00 [INF] HTTP GET /dashboard responded 404 in 511.2799 ms
+2025-08-09 23:10:59.460 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/dashboard - 404 null application/json; charset=utf-8 565.248ms
+2025-08-09 23:11:02.640 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/api/Auth/check - null null
+2025-08-09 23:11:02.649 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/logo_only.svg - null null
+2025-08-09 23:11:02.657 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:11:02.658 +08:00 [INF] Route matched with {action = "RedirectToOriginal", controller = "Redirect"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RedirectToOriginal(System.String) on controller TeenyWeenyURL.Controller.RedirectController (TeenyWeenyURL).
+2025-08-09 23:11:02.668 +08:00 [INF] Redirect attempt for shortcode: logo_only.svg
+2025-08-09 23:11:02.669 +08:00 [WRN] Short URL not found for shortcode: logo_only.svg
+2025-08-09 23:11:02.670 +08:00 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-09 23:11:02.672 +08:00 [INF] Executed action TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL) in 11.7044ms
+2025-08-09 23:11:02.673 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:11:02.676 +08:00 [INF] HTTP GET /logo_only.svg responded 404 in 22.6011 ms
+2025-08-09 23:11:02.679 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/logo_only.svg - 404 null application/json; charset=utf-8 29.4362ms
+2025-08-09 23:11:02.711 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.AuthController.TestAuth (TeenyWeenyURL)'
+2025-08-09 23:11:02.715 +08:00 [INF] Route matched with {action = "TestAuth", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult TestAuth() on controller TeenyWeenyURL.Controller.AuthController (TeenyWeenyURL).
+2025-08-09 23:11:02.720 +08:00 [INF] Authentication check for user: Daikii (ID: 2)
+2025-08-09 23:11:02.721 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-09 23:11:02.728 +08:00 [INF] Executed action TeenyWeenyURL.Controller.AuthController.TestAuth (TeenyWeenyURL) in 10.305ms
+2025-08-09 23:11:02.729 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.AuthController.TestAuth (TeenyWeenyURL)'
+2025-08-09 23:11:02.731 +08:00 [INF] HTTP GET /api/Auth/check responded 200 in 86.1950 ms
+2025-08-09 23:11:02.733 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/api/Auth/check - 200 null application/json; charset=utf-8 92.9204ms
+2025-08-09 23:11:02.754 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/api/ShortUrls/all-urls?page=1&pageSize=10 - null null
+2025-08-09 23:11:02.761 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId (TeenyWeenyURL)'
+2025-08-09 23:11:02.768 +08:00 [INF] Route matched with {action = "GetShortUrlPerUserId", controller = "ShortUrls"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetShortUrlPerUserId(Int32, Int32) on controller TeenyWeenyURL.Controller.ShortUrlsController (TeenyWeenyURL).
+2025-08-09 23:11:02.776 +08:00 [INF] Retrieving short URLs for user 2 - Page: 1, PageSize: 10
+2025-08-09 23:11:03.586 +08:00 [INF] Executed DbCommand (39ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "ShortUrls" AS s
+WHERE s."UserId" = @__id_0
+2025-08-09 23:11:03.634 +08:00 [INF] Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."ShortCode", s."OriginalUrl", s."Clicks", s."CreatedAt", s."Note"
+FROM "ShortUrls" AS s
+WHERE s."UserId" = @__id_0
+ORDER BY s."CreatedAt" DESC
+LIMIT @__p_2 OFFSET @__p_1
+2025-08-09 23:11:03.642 +08:00 [INF] Retrieved 2 short URLs for user 2 (Page 1 of 1)
+2025-08-09 23:11:03.645 +08:00 [INF] Executing OkObjectResult, writing value of type 'TeenyWeenyURL.Model.DTO.PaginatedUrlsResponse`1[[TeenyWeenyURL.Model.DTO.ShortUrlResponse, TeenyWeenyURL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-09 23:11:03.662 +08:00 [INF] Executed action TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId (TeenyWeenyURL) in 891.6018ms
+2025-08-09 23:11:03.666 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId (TeenyWeenyURL)'
+2025-08-09 23:11:03.668 +08:00 [INF] HTTP GET /api/ShortUrls/all-urls responded 200 in 908.9540 ms
+2025-08-09 23:11:03.674 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/api/ShortUrls/all-urls?page=1&pageSize=10 - 200 null application/json; charset=utf-8 919.2976ms
+2025-08-09 23:11:03.677 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/logo_only.svg - null null
+2025-08-09 23:11:03.680 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:11:03.681 +08:00 [INF] Route matched with {action = "RedirectToOriginal", controller = "Redirect"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RedirectToOriginal(System.String) on controller TeenyWeenyURL.Controller.RedirectController (TeenyWeenyURL).
+2025-08-09 23:11:03.683 +08:00 [INF] Redirect attempt for shortcode: logo_only.svg
+2025-08-09 23:11:03.684 +08:00 [WRN] Short URL not found for shortcode: logo_only.svg
+2025-08-09 23:11:03.686 +08:00 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-09 23:11:03.688 +08:00 [INF] Executed action TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL) in 4.6364ms
+2025-08-09 23:11:03.691 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.RedirectController.RedirectToOriginal (TeenyWeenyURL)'
+2025-08-09 23:11:03.692 +08:00 [INF] HTTP GET /logo_only.svg responded 404 in 12.9237 ms
+2025-08-09 23:11:03.694 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/logo_only.svg - 404 null application/json; charset=utf-8 17.163ms
+2025-08-09 23:11:07.637 +08:00 [INF] Application is shutting down...
+2025-08-09 23:17:10.114 +08:00 [INF] User profile is available. Using 'C:\Users\jeffr\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-09 23:17:10.206 +08:00 [INF] Now listening on: http://localhost:5140
+2025-08-09 23:17:10.209 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-09 23:17:10.210 +08:00 [INF] Hosting environment: Development
+2025-08-09 23:17:10.211 +08:00 [INF] Content root path: C:\Users\jeffr\Documents\Programming\TeenyWeenyURL\TeenyWeenyURL
+2025-08-09 23:17:24.203 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/dashboard - null null
+2025-08-09 23:17:24.221 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-08-09 23:17:24.273 +08:00 [INF] Executing endpoint 'Fallback {*path:nonfile}'
+2025-08-09 23:17:24.288 +08:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'C:\Users\jeffr\Documents\Programming\TeenyWeenyURL\TeenyWeenyURL\wwwroot\index.html'
+2025-08-09 23:17:24.290 +08:00 [INF] Executed endpoint 'Fallback {*path:nonfile}'
+2025-08-09 23:17:24.293 +08:00 [INF] HTTP GET /index.html responded 200 in 39.4874 ms
+2025-08-09 23:17:24.298 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/index.html - 200 475 text/html 97.25ms
+2025-08-09 23:17:24.358 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/api/Auth/check - null null
+2025-08-09 23:17:24.371 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/logo_only.svg - null null
+2025-08-09 23:17:24.390 +08:00 [INF] Sending file. Request path: '/logo_only.svg'. Physical path: 'C:\Users\jeffr\Documents\Programming\TeenyWeenyURL\TeenyWeenyURL\wwwroot\logo_only.svg'
+2025-08-09 23:17:24.392 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/logo_only.svg - 200 299704 image/svg+xml 20.9593ms
+2025-08-09 23:17:24.439 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.AuthController.TestAuth (TeenyWeenyURL)'
+2025-08-09 23:17:24.454 +08:00 [INF] Route matched with {action = "TestAuth", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult TestAuth() on controller TeenyWeenyURL.Controller.AuthController (TeenyWeenyURL).
+2025-08-09 23:17:24.539 +08:00 [INF] Authentication check for user: Daikii (ID: 2)
+2025-08-09 23:17:24.542 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-09 23:17:24.582 +08:00 [INF] Executed action TeenyWeenyURL.Controller.AuthController.TestAuth (TeenyWeenyURL) in 124.3395ms
+2025-08-09 23:17:24.584 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.AuthController.TestAuth (TeenyWeenyURL)'
+2025-08-09 23:17:24.586 +08:00 [INF] HTTP GET /api/Auth/check responded 200 in 223.4204 ms
+2025-08-09 23:17:24.589 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/api/Auth/check - 200 null application/json; charset=utf-8 231.2913ms
+2025-08-09 23:17:24.597 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/api/ShortUrls/all-urls?page=1&pageSize=10 - null null
+2025-08-09 23:17:24.605 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId (TeenyWeenyURL)'
+2025-08-09 23:17:24.614 +08:00 [INF] Route matched with {action = "GetShortUrlPerUserId", controller = "ShortUrls"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetShortUrlPerUserId(Int32, Int32) on controller TeenyWeenyURL.Controller.ShortUrlsController (TeenyWeenyURL).
+2025-08-09 23:17:24.629 +08:00 [INF] Retrieving short URLs for user 2 - Page: 1, PageSize: 10
+2025-08-09 23:17:25.499 +08:00 [INF] Executed DbCommand (41ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "ShortUrls" AS s
+WHERE s."UserId" = @__id_0
+2025-08-09 23:17:25.543 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."ShortCode", s."OriginalUrl", s."Clicks", s."CreatedAt", s."Note"
+FROM "ShortUrls" AS s
+WHERE s."UserId" = @__id_0
+ORDER BY s."CreatedAt" DESC
+LIMIT @__p_2 OFFSET @__p_1
+2025-08-09 23:17:25.552 +08:00 [INF] Retrieved 2 short URLs for user 2 (Page 1 of 1)
+2025-08-09 23:17:25.556 +08:00 [INF] Executing OkObjectResult, writing value of type 'TeenyWeenyURL.Model.DTO.PaginatedUrlsResponse`1[[TeenyWeenyURL.Model.DTO.ShortUrlResponse, TeenyWeenyURL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-09 23:17:25.573 +08:00 [INF] Executed action TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId (TeenyWeenyURL) in 957.3817ms
+2025-08-09 23:17:25.575 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId (TeenyWeenyURL)'
+2025-08-09 23:17:25.577 +08:00 [INF] HTTP GET /api/ShortUrls/all-urls responded 200 in 977.2368 ms
+2025-08-09 23:17:25.582 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/api/ShortUrls/all-urls?page=1&pageSize=10 - 200 null application/json; charset=utf-8 985.0937ms
+2025-08-09 23:17:27.345 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/api/Auth/check - null null
+2025-08-09 23:17:27.345 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5140/api/ShortUrls/all-urls?page=1&pageSize=10 - null null
+2025-08-09 23:17:27.350 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.AuthController.TestAuth (TeenyWeenyURL)'
+2025-08-09 23:17:27.355 +08:00 [INF] Executing endpoint 'TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId (TeenyWeenyURL)'
+2025-08-09 23:17:27.357 +08:00 [INF] Route matched with {action = "TestAuth", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult TestAuth() on controller TeenyWeenyURL.Controller.AuthController (TeenyWeenyURL).
+2025-08-09 23:17:27.358 +08:00 [INF] Route matched with {action = "GetShortUrlPerUserId", controller = "ShortUrls"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetShortUrlPerUserId(Int32, Int32) on controller TeenyWeenyURL.Controller.ShortUrlsController (TeenyWeenyURL).
+2025-08-09 23:17:27.360 +08:00 [INF] Authentication check for user: Daikii (ID: 2)
+2025-08-09 23:17:27.361 +08:00 [INF] Retrieving short URLs for user 2 - Page: 1, PageSize: 10
+2025-08-09 23:17:27.361 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-09 23:17:27.363 +08:00 [INF] Executed action TeenyWeenyURL.Controller.AuthController.TestAuth (TeenyWeenyURL) in 4.601ms
+2025-08-09 23:17:27.364 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.AuthController.TestAuth (TeenyWeenyURL)'
+2025-08-09 23:17:27.365 +08:00 [INF] HTTP GET /api/Auth/check responded 200 in 16.9430 ms
+2025-08-09 23:17:27.366 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/api/Auth/check - 200 null application/json; charset=utf-8 20.9766ms
+2025-08-09 23:17:27.413 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "ShortUrls" AS s
+WHERE s."UserId" = @__id_0
+2025-08-09 23:17:27.417 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."ShortCode", s."OriginalUrl", s."Clicks", s."CreatedAt", s."Note"
+FROM "ShortUrls" AS s
+WHERE s."UserId" = @__id_0
+ORDER BY s."CreatedAt" DESC
+LIMIT @__p_2 OFFSET @__p_1
+2025-08-09 23:17:27.420 +08:00 [INF] Retrieved 2 short URLs for user 2 (Page 1 of 1)
+2025-08-09 23:17:27.422 +08:00 [INF] Executing OkObjectResult, writing value of type 'TeenyWeenyURL.Model.DTO.PaginatedUrlsResponse`1[[TeenyWeenyURL.Model.DTO.ShortUrlResponse, TeenyWeenyURL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-09 23:17:27.423 +08:00 [INF] Executed action TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId (TeenyWeenyURL) in 62.9362ms
+2025-08-09 23:17:27.424 +08:00 [INF] Executed endpoint 'TeenyWeenyURL.Controller.ShortUrlsController.GetShortUrlPerUserId (TeenyWeenyURL)'
+2025-08-09 23:17:27.433 +08:00 [INF] HTTP GET /api/ShortUrls/all-urls responded 200 in 82.2965 ms
+2025-08-09 23:17:27.435 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5140/api/ShortUrls/all-urls?page=1&pageSize=10 - 200 null application/json; charset=utf-8 89.5185ms
+2025-08-09 23:18:59.401 +08:00 [INF] Application is shutting down...

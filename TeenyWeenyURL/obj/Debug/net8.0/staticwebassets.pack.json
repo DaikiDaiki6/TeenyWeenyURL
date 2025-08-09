@@ -1,0 +1,53 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\jeffr\\Documents\\Programming\\TeenyWeenyURL\\TeenyWeenyURL\\wwwroot\\assets\\index-C2cCmwQc.js",
+      "PackagePath": "staticwebassets\\assets\\index-C2cCmwQc.js"
+    },
+    {
+      "Id": "C:\\Users\\jeffr\\Documents\\Programming\\TeenyWeenyURL\\TeenyWeenyURL\\wwwroot\\assets\\index-s88cLVlo.css",
+      "PackagePath": "staticwebassets\\assets\\index-s88cLVlo.css"
+    },
+    {
+      "Id": "C:\\Users\\jeffr\\Documents\\Programming\\TeenyWeenyURL\\TeenyWeenyURL\\wwwroot\\darkmode_logo.svg",
+      "PackagePath": "staticwebassets\\darkmode_logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\jeffr\\Documents\\Programming\\TeenyWeenyURL\\TeenyWeenyURL\\wwwroot\\idk.gif",
+      "PackagePath": "staticwebassets\\idk.gif"
+    },
+    {
+      "Id": "C:\\Users\\jeffr\\Documents\\Programming\\TeenyWeenyURL\\TeenyWeenyURL\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\jeffr\\Documents\\Programming\\TeenyWeenyURL\\TeenyWeenyURL\\wwwroot\\lightmode_logo.svg",
+      "PackagePath": "staticwebassets\\lightmode_logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\jeffr\\Documents\\Programming\\TeenyWeenyURL\\TeenyWeenyURL\\wwwroot\\logo_only.svg",
+      "PackagePath": "staticwebassets\\logo_only.svg"
+    },
+    {
+      "Id": "C:\\Users\\jeffr\\Documents\\Programming\\TeenyWeenyURL\\TeenyWeenyURL\\wwwroot\\vite.svg",
+      "PackagePath": "staticwebassets\\vite.svg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.TeenyWeenyURL.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.TeenyWeenyURL.props",
+      "PackagePath": "build\\TeenyWeenyURL.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.TeenyWeenyURL.props",
+      "PackagePath": "buildMultiTargeting\\TeenyWeenyURL.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.TeenyWeenyURL.props",
+      "PackagePath": "buildTransitive\\TeenyWeenyURL.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
