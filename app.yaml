@@ -1,0 +1,37 @@
+name: teenyweenyurl
+services:
+  - name: backend
+    source_dir: /
+    github:
+      repo: your-username/TeenyWeenyURL
+      branch: main
+    run_command: dotnet TeenyWeenyURL.dll
+    environment_slug: dotnet
+    instance_count: 1
+    instance_size_slug: basic-xxs
+    http_port: 8080
+    envs:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: ASPNETCORE_URLS
+        value: http://0.0.0.0:8080
+    build_command: |
+      # Build React frontend
+      cd TeenyWeenyFrontend
+      npm install
+      npm run build
+      
+      # Copy to backend wwwroot
+      cd ..
+      mkdir -p TeenyWeenyURL/wwwroot
+      cp -r TeenyWeenyFrontend/dist/* TeenyWeenyURL/wwwroot/
+      
+      # Build .NET application
+      cd TeenyWeenyURL
+      dotnet publish -c Release -o ../publish
+
+databases:
+  - engine: PG
+    num_nodes: 1
+    size: db-s-de-database
+    version: "15"
