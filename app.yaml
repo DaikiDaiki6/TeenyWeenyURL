@@ -1,9 +1,9 @@
 name: teenyweenyurl
 services:
-  - name: backend
+  - name: teenyweenyurl-app
     source_dir: /
     github:
-      repo: your-username/TeenyWeenyURL
+      repo: DaikiDaiki6/TeenyWeenyURL # Update with your GitHub username
       branch: main
     run_command: dotnet TeenyWeenyURL.dll
     environment_slug: dotnet
@@ -15,23 +15,40 @@ services:
         value: Production
       - key: ASPNETCORE_URLS
         value: http://0.0.0.0:8080
+      - key: JwtSettings__Issuer
+        value: TeenyWeenyURL
+      - key: JwtSettings__Audience
+        value: TeenyWeenyFrontend
+      - key: JwtSettings__SecretKey
+        value: ${JWT_SECRET_KEY}
+      - key: JwtSettings__ExpiryMinutes
+        value: "60"
     build_command: |
+      # Update frontend URLs for App Platform deployment
+      cd TeenyWeenyFrontend/src/Components/LayoutComponents
+      sed -i 's|http://localhost:5140|https://${APP_DOMAIN}|g' *.jsx
+
       # Build React frontend
+      cd ../../..
       cd TeenyWeenyFrontend
       npm install
       npm run build
-      
+
       # Copy to backend wwwroot
       cd ..
       mkdir -p TeenyWeenyURL/wwwroot
       cp -r TeenyWeenyFrontend/dist/* TeenyWeenyURL/wwwroot/
-      
+
       # Build .NET application
       cd TeenyWeenyURL
       dotnet publish -c Release -o ../publish
 
 databases:
   - engine: PG
+    name: teenyweenyurl-db
     num_nodes: 1
-    size: db-s-de-database
+    size: db-s-dev-database
     version: "15"
+# Environment variables to set in DigitalOcean App Platform:
+# JWT_SECRET_KEY: your-super-secret-jwt-key-here
+# APP_DOMAIN: your-app-name.ondigitalocean.app

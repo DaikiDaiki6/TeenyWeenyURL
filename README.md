@@ -260,46 +260,81 @@ npm run preview
 
 ## 🚀 Deployment
 
-### Option 1: DigitalOcean App Platform
+### Option 1: DigitalOcean Droplet (Recommended - $4-6/month)
 
-1. Create `app.yaml` in root directory:
+**Complete deployment to a DigitalOcean Droplet with integrated frontend + backend:**
 
-```yaml
-name: teenyweenyurl
-services:
-  - name: backend
-    source_dir: /TeenyWeenyURL
-    run_command: dotnet TeenyWeenyURL.dll
-    environment_slug: dotnet
-    instance_count: 1
-    instance_size_slug: basic-xxs
-    http_port: 8080
+#### Prerequisites
 
-  - name: frontend
-    source_dir: /TeenyWeenyFrontend
-    build_command: npm run build
-    output_dir: dist
-    environment_slug: node-js
+- DigitalOcean Droplet (Ubuntu 22.04 LTS, minimum 512MB RAM)
+- Your GitHub repository
 
-databases:
-  - name: db
-    engine: PG
-    size: basic
-    num_nodes: 1
-```
+#### Deployment Steps
 
+1. **Create and connect to your Droplet:**
+
+   ```bash
+   ssh root@your-droplet-ip
+   ```
+
+2. **Run the automated deployment script:**
+
+   ```bash
+   # Create deployment script
+   wget https://raw.githubusercontent.com/your-username/TeenyWeenyURL/main/deploy-droplet.sh
+   chmod +x deploy-droplet.sh
+
+   # Edit the script to update your GitHub username
+   nano deploy-droplet.sh
+
+   # Run deployment
+   ./deploy-droplet.sh
+   ```
+
+3. **Update frontend URLs for your domain:**
+
+   ```bash
+   # Replace localhost with your domain in frontend components
+   cd /var/www/TeenyWeenyURL/TeenyWeenyFrontend/src/Components/LayoutComponents
+   sed -i 's|http://localhost:5140|http://YOUR-DROPLET-IP|g' *.jsx
+
+   # Rebuild and deploy
+   cd /var/www/TeenyWeenyURL/TeenyWeenyFrontend
+   npm run build
+   cp -r dist/* /var/www/teenyweenyurl-app/wwwroot/
+
+   # Restart application
+   systemctl restart teenyweenyurl
+   ```
+
+4. **Your app will be available at:** `http://your-droplet-ip`
+
+#### What the Deployment Includes
+
+- ✅ **Integrated deployment** - Frontend served by .NET backend
+- ✅ **PostgreSQL database** - Fully configured with migrations
+- ✅ **Nginx reverse proxy** - Professional web server setup
+- ✅ **Systemd service** - Auto-restart and background running
+- ✅ **Firewall configuration** - Secure server setup
+- ✅ **Swap memory** - Handles build processes on small droplets
+
+#### Cost: ~$4-6/month (much cheaper than App Platform)
+
+### Option 2: DigitalOcean App Platform (~$20/month)
+
+For a more managed solution with auto-scaling:
+
+1. Create `app.yaml` in root directory (see file in repository)
 2. Connect your GitHub repository to DigitalOcean App Platform
 3. Configure environment variables
 4. Deploy
 
-### Option 2: Railway
+### Option 3: Railway
 
 1. Connect GitHub repository to Railway
 2. Add PostgreSQL database service
 3. Configure environment variables
 4. Deploy both frontend and backend services
-
-### Option 3: Manual Deployment
 
 #### Backend (Linux Server)
 
