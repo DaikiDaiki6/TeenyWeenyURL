@@ -2,8 +2,6 @@
 
 A modern, full-stack URL shortening service built with ASP.NET Core and React. Create, manage, and track your shortened URLs with a beautiful, responsive interface.
 
-![TeenyWeenyURL Banner](https://via.placeholder.com/800x200/2563eb/ffffff?text=TeenyWeenyURL)
-
 ## ✨ Features
 
 ### Core Functionality
